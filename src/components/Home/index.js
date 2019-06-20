@@ -1,9 +1,13 @@
 import React from 'react';
 
 const Home = () => (
-    <div>
-        <h1>Soy Home</h1>
-    </div>
+    <container className="portfolio-container">
+        <div className="portfolio-home">
+            <h1>Soy Home</h1>
+        </div>
+
+    </container>
+
 
 );
 

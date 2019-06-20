@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.portfolio-container{
+  display:flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.portfolio-home{
+  width: 100%;
+  display:flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  flex-direction: column;
+}
+
+.about-container{
+
+}
+
+/*icons div */
+.about-icons{
+
+}
+
+.about-resume{
+  
+}
+
+/* icons image */
+.icons-network{
+
+}
