@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: gray;
 }
 
 code {
@@ -12,15 +13,29 @@ code {
     monospace;
 }
 
+h1{
+  font-size:6vw;
+}
+
+p{
+  font-size:2vw;
+}
+
 .NavBar{
   display: none;
 }
 
 .portfolio-container{
+ 
   display:flex;
   min-height: 100vh;
   overflow: hidden;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2em;
+	width: 90%;
+	max-width: 1200px
 }
 
 .portfolio-home{
@@ -33,6 +48,15 @@ code {
   flex-direction: column;
 }
 
+.about-botton{
+    position: fixed;
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+    bottom: center;
+    right: 950px;
+     
+}
+
 
 .project-list{
   background-size: cover;
@@ -43,14 +67,50 @@ code {
 
 }
 
+.project-card{
+  display:flex;
+  background-color: grey;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 .project-img{
+
+  width: 600px;
+	height: 400px;
   background-size: cover;
+  padding: 1em;
+  margin: 3em;
+}
+
+.project-img > * {
+  border: 1px solid red; 
+  width: 100%;
+  flex: 1 0 auto; 
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-img p:nth-child(1) {
+  font-size:5vw;
+  color: white;
+  font-size: 3vw;
+  transform: translate(-49%, 135%);
+}
+
+.project-img p:nth-child(2) {
+  color: white;
+  font-size: 1vw;
+  transform: translate(-50%, 318%);
 }
 
 .navigation-widget{
+display: block;
 float:left;
-width:100px;
+width:100%;
 overflow-y: auto;
 max-height: 100px;
 background-color: blueviolet;
