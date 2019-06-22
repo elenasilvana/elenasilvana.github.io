@@ -1,5 +1,8 @@
 import React from 'react';
 import { HashRouter as Router, Route} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes'
+
 import HomePage from '../Home';
 import AboutPage from '../About';
 
@@ -16,11 +19,12 @@ import MoviestillPage from '../MoviestillProject';
 
 
 
-
-
 function App() {
   return (
+   
+
     <Router>
+      <Navigation />
       <Route exact path="/" component={HomePage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/cipher" component={CipherPage} />
@@ -32,6 +36,30 @@ function App() {
       <Route path="/moviestillproject" component={MoviestillPage} />
     </Router>
   );
-}
+};
+
+
+const Navigation = () => (
+  <div className="NavBar">
+    <nav>
+      <ul>
+        <li>
+        <Link to={ROUTES.ABOUT}>About</Link>
+        </li>
+        <li>
+        <Link to={ROUTES.HOME}>Home</Link>
+        </li>
+        <li>
+        <Link to={ROUTES.CIPHER}>cipher</Link>
+        </li>
+        <li>
+        <Link to={ROUTES.MEETPOKEMON}>meet pokemon</Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  );
+  
+  
 
 export default App;
