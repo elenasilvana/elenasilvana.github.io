@@ -5,12 +5,13 @@ import * as ROUTES from '../../constants/routes'
 const projects = [
     {
         name: 'Conoce Pokemón',
-        img: 'https://i.postimg.cc/QCHGKmRc/1949831-1.jpg',
+        img: 'https://i.postimg.cc/mZnqwf58/alola-form-kanto-pokemon-go.jpg',
         category: 'front-end'
     }
 ];
 
-//console.log(projects[1].img);
+//<img src={projects[0].img} alt="imagen"></img>
+console.log(projects[0].img);
 
 
 const Home = () => (
@@ -25,8 +26,8 @@ const Home = () => (
        
 
         <div className="project-list">
-            <p>proyecto</p>
-            <img src="{projects[0].img}" alt="imagen"></img>
+            <p></p>
+            
             {/*projects.map((project, index)=> (
                 <div>
                     <p>{project.name}</p>
