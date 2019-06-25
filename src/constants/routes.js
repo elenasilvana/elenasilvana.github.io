@@ -7,3 +7,6 @@ export const BURGERQUEEN = "/burgerqueen";
 export const ETERNIDAD = "/eternidad";
 export const OBRAGRIS = "/obragris";
 export const MOVIESTILLPROJECT = "/moviestillproject";
+
+export const sum = (a,b) => {return a+b;};
+export const message = (txt) => {return `<h1>${txt}</h1>`;}

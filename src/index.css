@@ -39,13 +39,16 @@ p{
 }
 
 .portfolio-home{
+  
   width: 100%;
+  height: 100vh;
   display:flex;
   flex: 1;
   justify-content: center;
-  align-items: center;
+  /*align-items: center;*/
   background-size: cover;
-  flex-direction: column;
+ /* flex-direction: column;*/
+  background-color: aquamarine;
 }
 
 .about-botton{
@@ -84,6 +87,7 @@ p{
   padding: 1em;
   margin: 3em;
 }
+/* margin-top, margin-bottom*/
 
 .project-img > * {
   border: 1px solid red; 
