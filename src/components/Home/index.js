@@ -37,7 +37,7 @@ const Home = () => (
                             <h1 id="ES">Elena Silvana</h1>
                         </div>
                     <p className="text-center">hola mundo</p>
-                    <Link className=""  to={ROUTES.ABOUT}>About</Link>
+                    <Link className="about-botton"  to={ROUTES.ABOUT}>About</Link>
                 </div>
             </div>
         </div>
