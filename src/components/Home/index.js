@@ -2,18 +2,33 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes'
 import ShowProject from '../ShowProject';
+//import Image from 'react-bootstrap/Image'
 
 const projects = [
     {
-        name: 'Conoce Pokemón',
-        img: 'https://i.postimg.cc/mZnqwf58/alola-form-kanto-pokemon-go.jpg',
-        category: 'front-end',
-        deliverable: 'WebApplication'
+        "name": "Conoce Pokemón",
+        "img": "https://i.postimg.cc/mZnqwf58/alola-form-kanto-pokemon-go.jpg",
+        "category": "front-end",
+        "deliverable": "WebApplication",
+        "description": "some content",
+        "url": "https://elenasilvana.github.io/GDL002-data-lovers/",
+        "route": 'MEETPOKEMON'
 
+    }, 
+    {
+        "name": "Secret Cipher",
+        "img": "someimage",
+        "category": "front-end",
+        "deliverable": "WebApplication",
+        "description": "some content about the project",
+        "url": "https://elenasilvana.github.io/gdl-2019-01-bc-core-cipher/src/",
+        "route": "CIPHER"
+ 
     }
 ];
 
-/*  <div className="navigation-widget">
+    /*  
+    <div className="navigation-widget">
             <p><a href="#ES"></a>Home</p>
             {projects.map((project, key)=> (
                 <p><a href={`#${project.name}`}></a>{project.name}</p>
@@ -36,14 +51,14 @@ const Home = () => (
                         <div className="name">
                             <h1 id="ES">Elena Silvana</h1>
                         </div>
-                    <p className="text-center">hola mundo</p>
+                    <p className="text-center"></p>
                     <Link className="about-botton"  to={ROUTES.ABOUT}>About</Link>
-                </div>
+                   
+                 </div>
             </div>
         </div>
 
        
-
         <div className="project-list">
         
             {projects.map((project, key)=> (
@@ -51,6 +66,7 @@ const Home = () => (
                     img={project.img}
                     name={project.name}
                     deliverable={project.deliverable}
+                    route={project.route}
                 />
 
             ))}

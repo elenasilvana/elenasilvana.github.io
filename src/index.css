@@ -13,11 +13,11 @@ code {
 }
 
 h1{
-  font-size:6vw;
+
 }
 
 p{
-  font-size:2vw;
+
 }
 
 .NavBar{
@@ -40,12 +40,11 @@ p{
   
   height: 100vh;
   display:flex;
-  flex: 1;
   justify-content: center;
   align-items: center;
   background-size: cover;
  /* flex-direction: column;*/
-  background-color: aquamarine;
+  background-color:  #DCE3E7;
 }
 
 .about-botton{
@@ -53,7 +52,9 @@ p{
     transform-origin: 0 0;
     transform: rotate(270deg);
     bottom: center;
-     
+    top: 55%; 
+    left:5%;
+    color: black;
 }
 
 
@@ -63,6 +64,7 @@ p{
   justify-content: center;
   align-items: center;
   background-size: cover;
+  
 
 }
 
@@ -71,7 +73,9 @@ p{
   background-color: grey;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
+
 
 
 
@@ -87,8 +91,9 @@ p{
 }
 /* margin-top, margin-bottom*/
 
+
 .project-img > * {
-  border: 1px solid red; 
+  border: 1px; 
   width: 100%;
   flex: 1 0 auto; 
   display: flex;
@@ -99,22 +104,30 @@ p{
 .project-img p:nth-child(1) {
   font-size:5vw;
   color: white;
-  font-size: 3vw;
-  transform: translate(-49%, 135%);
+  font-size: 4vw;
+  transform: translate(-50%, 225%);
 }
 
 .project-img p:nth-child(2) {
   color: white;
-  font-size: 1vw;
-  transform: translate(-50%, 318%);
+  font-size: 2vw;
+  transform: translate(-50%, 335%);
 }
 
-.navigation-widget{
+.navigation-widget{/*
 display: block;
 float:left;
 width:100%;
 overflow-y: auto;
-max-height: 100px;
+max-height: 100px;*/
+height: 80%;
+width: 90px;
+position: absolute;
+top: 10%;
+right: 6%;
+z-index: 100;
+transform: translateZ(0);
+
 background-color: blueviolet;
 }
 
@@ -145,8 +158,55 @@ background-color: blueviolet;
 
 }
 
-/*
+
 @media only screen
-and (min-device-width : 1440px)
-and (max-device-width : 837px)
-*/
+and (max-width : 1170px)
+{
+
+  .about-botton{
+
+    z-index: 1;
+    border-color: transparent;
+    
+    /*
+    position: fixed;
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+    bottom: center;
+    top: 55%; 
+    left:5%;
+    color: black;*/
+  }
+  .project-img{
+    /*
+    width: 400px;
+    height: 250px;
+    background-size: cover;*/
+
+  }
+  
+  .project-img > * {
+   /* border: 1px solid red; */
+    width: 100%;
+    flex: 1 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-img p:nth-child(1) {
+    font-size:5vw;
+    color: white;
+    transform: translate(0%, 200%);
+  }
+  
+  .project-img p:nth-child(2) {
+    color: white;
+    font-size: 3vw;
+    transform: translate(0%, 280%);
+  }
+}
+
+.cipher-container{
+
+}

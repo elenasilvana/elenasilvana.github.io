@@ -1,9 +1,18 @@
 import React from 'react';
 
 const Cipher = () => (
-    <div>
-        <h1>Soy Cipher</h1>
-    </div>
+    <container className="cipher-container">
+
+        <div className="portfolio-home container-fluid">
+                    <div className="row">
+                        <div className="col">
+                                <div className="name">
+                                    <p className="text-center">Sorry, I'm working on the content of this page</p>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+    </container>
 
 );
 
