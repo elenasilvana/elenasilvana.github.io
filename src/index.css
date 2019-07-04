@@ -47,6 +47,10 @@ p{
   background-color:  #DCE3E7;
 }
 
+.name{
+ color: #16a2ab;
+}
+
 .about-botton{
     position: fixed;
     transform-origin: 0 0;
@@ -54,7 +58,7 @@ p{
     bottom: center;
     top: 55%; 
     left:5%;
-    color: black;
+    color: #51256d;
 }
 
 
@@ -70,7 +74,7 @@ p{
 
 .project-card{
   display:flex;
-  background-color: grey;
+  background-color: #DCE3E7;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -103,13 +107,13 @@ p{
 
 .project-img p:nth-child(1) {
   font-size:5vw;
-  color: white;
+  color: #a6a6a6;
   font-size: 4vw;
   transform: translate(-50%, 225%);
 }
 
 .project-img p:nth-child(2) {
-  color: white;
+  color: #a6a6a6;
   font-size: 2vw;
   transform: translate(-50%, 335%);
 }
@@ -196,12 +200,10 @@ and (max-width : 1170px)
   
   .project-img p:nth-child(1) {
     font-size:5vw;
-    color: white;
     transform: translate(0%, 200%);
   }
   
   .project-img p:nth-child(2) {
-    color: white;
     font-size: 3vw;
     transform: translate(0%, 280%);
   }
