@@ -162,6 +162,38 @@ background-color: blueviolet;
 
 }
 
+.portada{
+  
+  background-color: #DCE3E7;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.description{
+  /*
+  background-color: #16a2ab; */
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.details{
+  /* deliverable and url
+  background-color: #51256d;*/
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+}
+
 
 @media only screen
 and (max-width : 1170px)

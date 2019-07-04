@@ -1,15 +1,7 @@
 import React from 'react';
-
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
-import UnderConstruction from '../UnderConstruction';
-
 import ProjectComponent from '../ProjectComponent';
-
+//project data
 const PROJECTS = require('../../data/projects.json');
-//console.log('desde meed pokemon', PROJECTS);
 //meet-pokemon
 
 //.description .name .deliverable .url
