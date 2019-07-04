@@ -1,20 +1,41 @@
 import React from 'react';
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import UnderConstruction from '../UnderConstruction';
+
+import ProjectComponent from '../ProjectComponent';
+
+const PROJECTS = require('../../data/projects.json');
+//console.log('desde meed pokemon', PROJECTS);
+//meet-pokemon
+
+//.description .name .deliverable .url
+//console.log(PROJECTS.find((project)=>{return project.id === "meet-pokemon"}));
+
+const project = PROJECTS.find((project)=>{return project.id === "meet-pokemon"});
+console.log(project);
+
 const MeetPokemon = () => (
-    <container className="meetpokemon-container">
+    <div> 
+        <ProjectComponent 
 
-        <div className="meetpokemon-page portfolio-home container-fluid">
-                    <div className="row">
-                        <div className="col">
-                                <div className="name">
-                                    <p className="text-center">Sorry, I'm working on the content of this page</p>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-    </container>
+        description={project.description}
+        name={project.name}
+        deliverable={project.deliverable}
+        url={project.url}
+        id={project.id}
+        
+        />
+    </div>
+       // <Container fluid={false} className="meetpokemon-container">
+            
+       // </Container>
+    //))}               
+    
 
-
-);
+)
 
 export default MeetPokemon;
