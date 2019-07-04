@@ -13,7 +13,8 @@
         "type":"individual",
         "tools": "Git, Github",
         "metodologies": "AGILE, kanban, User Story, sprint planning",
-        "route": "MDLINKS"
+        "route": "MDLINKS",
+        "id":"md-links"
 	},{
 	 	"name": "Meet Pokemon",
         "img": "https://i.postimg.cc/mZnqwf58/alola-form-kanto-pokemon-go.jpg",
@@ -27,7 +28,8 @@
         "type":"team collaboration",
         "tools": "Git, GitHub Pages",
         "metodologies": "AGILE, kanban, User Story, sprint planning",
-        "route": "MEETPOKEMON"
+        "route": "MEETPOKEMON",
+        "id":"meet-pokemon"
 	},{
         "name": "Secret Cipher",
         "img": "someimage",
@@ -41,7 +43,8 @@
         "type": "individual",
         "tools": "Git, GitHub Pages, npm",
         "metodologies": "AGILE, kanban, User Story, sprint planning",
-        "route": "CIPHER"
+        "route": "CIPHER",
+        "id":"secret-cipher"
 
 	}
 ]
