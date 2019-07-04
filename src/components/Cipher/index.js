@@ -1,18 +1,24 @@
 import React from 'react';
+import ProjectComponent from '../ProjectComponent';
+//project data
+const PROJECTS = require('../../data/projects.json');
+//secret-cipher
+
+const project = PROJECTS.find((project)=>{return project.id === "secret-cipher"});
+console.log(project);
 
 const Cipher = () => (
-    <container className="cipher-container">
+    <div> 
+    <ProjectComponent 
 
-        <div className="portfolio-home container-fluid">
-                    <div className="row">
-                        <div className="col">
-                                <div className="name">
-                                    <p className="text-center">Sorry, I'm working on the content of this page</p>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-    </container>
+    description={project.description}
+    name={project.name}
+    deliverable={project.deliverable}
+    url={project.url}
+    id={project.id}
+    
+    />
+</div>
 
 );
 
