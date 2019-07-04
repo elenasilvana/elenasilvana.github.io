@@ -5,12 +5,9 @@ import Container from 'react-bootstrap/Container';
 
     class ProjectComponent extends Component {
         render(){
-
-
+            
                 return (
                     <Container fluid={false} className="meetpokemon-container">
-            
-  
                 <Row noGutters={true}>
                     <Col>
                         <div className={`${this.props.id}-page portada`}>
@@ -30,7 +27,7 @@ import Container from 'react-bootstrap/Container';
                         <h4>Deliverable</h4>
                         <p>{this.props.deliverable}</p>
                         <h4>Website</h4>
-                        <p><a href={this.props.url}>meet pokemon</a></p>
+                        <p><a href={this.props.url}>{this.props.name}</a></p>
                     </div>
                     </Col>
                 </Row> 
