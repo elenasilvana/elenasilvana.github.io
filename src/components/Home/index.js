@@ -4,28 +4,9 @@ import * as ROUTES from '../../constants/routes'
 import ShowProject from '../ShowProject';
 //import Image from 'react-bootstrap/Image'
 
-const projects = [
-    {
-        "name": "Conoce Pokemón",
-        "img": "https://i.postimg.cc/mZnqwf58/alola-form-kanto-pokemon-go.jpg",
-        "category": "front-end",
-        "deliverable": "WebApplication",
-        "description": "some content",
-        "url": "https://elenasilvana.github.io/GDL002-data-lovers/",
-        "route": 'MEETPOKEMON'
+const PROJECTS = require('../../data/projects.json');
 
-    }, 
-    {
-        "name": "Secret Cipher",
-        "img": "someimage",
-        "category": "front-end",
-        "deliverable": "WebApplication",
-        "description": "some content about the project",
-        "url": "https://elenasilvana.github.io/gdl-2019-01-bc-core-cipher/src/",
-        "route": "CIPHER"
- 
-    }
-];
+
 
     /*  
     <div className="navigation-widget">
@@ -39,7 +20,6 @@ const projects = [
        */
 
 //<img src={projects[0].img} alt="imagen"></img>
-console.log(projects[0].img);
 
 
 const Home = () => (
@@ -61,11 +41,11 @@ const Home = () => (
        
         <div className="project-list">
         
-            {projects.map((project, key)=> (
+            {PROJECTS.map((project, key)=> (
                 <ShowProject
                     img={project.img}
                     name={project.name}
-                    deliverable={project.deliverable}
+                    category={project.category}
                     route={project.route}
                 />
 

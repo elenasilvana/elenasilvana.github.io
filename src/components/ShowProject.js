@@ -31,7 +31,7 @@ class ShowProject extends Component {
                                 {console.log(ROUTES, this.props.route)}
                                 <div className="project-img" style={{backgroundImage: "url(" + this.props.img + ")"}}>
                                 <p className="project-name" id="project.name">{this.props.name}</p>
-                                <p>{this.props.deliverable}</p>
+                                <p>{this.props.category}</p>
                                 </div>
                             </Link>
                         </div>
