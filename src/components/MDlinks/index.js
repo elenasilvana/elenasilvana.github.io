@@ -16,6 +16,10 @@ const MDlinks = () => (
     deliverable={project.deliverable}
     url={project.url}
     id={project.id}
+    tech={project.technologies}
+    tools={project.tools}
+    uexd={project.uexd}
+    frontskills={project.frontskills}
     
     />
 </div>
