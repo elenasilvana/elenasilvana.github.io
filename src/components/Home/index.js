@@ -31,6 +31,7 @@ const Home = () => (
                         <div className="name">
                             <h1 id="ES">Elena Silvana</h1>
                         </div>
+                        <button className="go-top" onClick={()=>{window.scrollTo(0,0)}}><i class="material-icons" style={{color: "#51256d", fontSize: "25px"}}>arrow_upward</i></button>
                     <p className="text-center"></p>
                     <Link className="about-botton"  to={ROUTES.ABOUT}>About</Link>
                    
