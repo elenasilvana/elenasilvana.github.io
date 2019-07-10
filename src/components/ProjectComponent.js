@@ -3,6 +3,17 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
+/*
+<div class='burger-menu'>
+                            <div class='lateral-bars'>
+                                <span class='center'>MENU</span>
+                            </div>
+                        </div>
+ <div className="menu-icon">
+     
+</div>
+*/
+
     class ProjectComponent extends Component {
         render(){
             
@@ -10,9 +21,13 @@ import Container from 'react-bootstrap/Container';
                     <Container fluid={false} className="meetpokemon-container">
                 <Row noGutters={true}>
                     <Col>
+                        <div className="menu-icon">
+                            <i className="material-icons">menu</i>
+                        </div>
                         <div className={`${this.props.id}-page portada`}>
                             <h1>{this.props.name}</h1>
                         </div>
+                       
                     </Col>
                 </Row>
                 <Row noGutters={true}>
