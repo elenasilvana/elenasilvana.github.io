@@ -112,3 +112,11 @@ font-family: 'Merriweather Sans', sans-serif; */
   font-size: 5em;
   padding: 8px;
 }
+
+/*Resume page */
+
+.resume-right-col{
+  background: #27221F;
+  color: white;
+  padding:2em;
+}
