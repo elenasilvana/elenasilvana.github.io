@@ -30,7 +30,6 @@ class Projects extends Component {
                     <CardActions border>
                         <Button colored>Github</Button>
                         <Button colored>LiveDemo</Button>
-                        <Button colored>Github</Button>
                     </CardActions>
                     <CardMenu style={{ color: '#fff' }}>
                         <IconButton name="share" />
@@ -57,9 +56,8 @@ class Projects extends Component {
                             Burger queen
                     </CardText>
                         <CardActions border>
-                            <Button colored>Github</Button>
+                            <Button colored onClick={()=>{console.log('boton entrando')}}>Github</Button>
                             <Button colored>LiveDemo</Button>
-                            <Button colored>Github</Button>
                         </CardActions>
                         <CardMenu style={{ color: '#fff' }}>
                             <IconButton name="share" />
@@ -88,7 +86,6 @@ class Projects extends Component {
                     <CardActions border>
                         <Button colored>Github</Button>
                         <Button colored>LiveDemo</Button>
-                        <Button colored>Github</Button>
                     </CardActions>
                     <CardMenu style={{ color: '#fff' }}>
                         <IconButton name="share" />
