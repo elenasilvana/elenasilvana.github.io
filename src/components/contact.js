@@ -13,7 +13,7 @@ class Contact extends Component {
                             alt="avatar"
                             style={{ height: '250px' }}></img>
                         <p style={{ margin: 'auto,', paddingTop: '1em' }}>
-                            Front end developer formada en Laboratoria, egresada de la licenciatura en artes visuales de la secretaría de cultura Jalisco
+                            Hi, did you liked my work?
                         </p>
                     </Cell>
                     <Cell col={6}>
@@ -23,21 +23,33 @@ class Contact extends Component {
                         <div className="contact-list">
                             <List>
                                 <ListItem>
-                                    <ListItemContent style={{fontSize: '30px', fontFamily: 'Merriweather Sans'}}>
-                                        <i className="fa fa-phone-square" aria-hidden='true'/>
-                                        (33) 36 26 45 79
+                                    <ListItemContent style={{ fontSize: '30px', fontFamily: 'Merriweather Sans', color: '#9da1aa' }}>
+                                        <a
+                                        href="mailto:ele.silvana.c@gmail.com">
+                                        <i className="fa fa-envelope" aria-hidden='true' />
+                                        ele.silvana.c@gmail.com
+                                        </a>
                                         </ListItemContent>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemContent style={{fontSize: '30px', fontFamily: 'Merriweather Sans'}}>
-                                        <i className="fa fa-envelope" aria-hidden='true'/>
-                                        ele.silvana.c@gmail.com
-                                        </ListItemContent>
+                                    <ListItemContent style={{ fontSize: '30px', fontFamily: 'Merriweather Sans', color: '#9da1aa' }}>
+                                        <a
+                                            target="_blank"
+                                            href="https://github.com/elenasilvana">
+                                            <i className="fa fa-github" aria-hidden='true' />
+                                            elenasilvana
+                                        </a>
+                                    </ListItemContent>
                                 </ListItem><ListItem>
-                                    <ListItemContent style={{fontSize: '30px', fontFamily: 'Merriweather Sans'}}>
-                                        <i className="fa fa-phone-square" aria-hidden='true'/>
-                                        linkedin
-                                        </ListItemContent>
+                                    <ListItemContent style={{ fontSize: '30px', fontFamily: 'Merriweather Sans', color: '#9da1aa' }}>
+                                        <a
+                                            target="_blank"
+                                            href="https://www.linkedin.com/in/elena-silvana-c/">
+                                            <i className="fa fa-linkedin" aria-hidden='true' />
+                                            elena-silvana-c
+                                        </a>
+
+                                    </ListItemContent>
                                 </ListItem>
                             </List>
                         </div>

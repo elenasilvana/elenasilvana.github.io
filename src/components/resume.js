@@ -8,7 +8,7 @@ class Resume extends Component {
         return (
             <div>
                 <Grid>
-                    <Cell col={4}>
+                    <Cell className="resume-description" col={4}>
                         <div style={{ textAlign: 'center' }}>
                             <img
                                 src="https://avatarfiles.alphacoders.com/125/125495.jpg"
@@ -17,15 +17,23 @@ class Resume extends Component {
                             ></img>
                         </div>
                         <h2 style={{ paddingTop: '2em' }}>Elena Silvana</h2>
-                        <h4 style={{ color: 'grey' }}>Front-End Developer</h4>
+                        <h4 style={{ color: '#d9d9d9' }}>Front-End Developer</h4>
                         <hr style={{ borderTop: '3px solid #833fb2', width: '50%' }} />
-                        <h3>Contact Me</h3>
+                        <h3>Contact Me :)!</h3>
                         <h4>Email</h4>
                         <p>ele.silvana.c@gmail.com</p>
                         <h4>Github</h4>
                         <p>elenasilvana</p>
                         <h4>Linkedin</h4>
                         <p>elenasilvana</p>
+                        <hr style={{ borderTop: '3px solid #833fb2', width: '50%' }} />
+                        <h4>CV</h4>
+                        <a target="_blank"
+                        href="https://drive.google.com/open?id=1ZVq1r7mKTM9fWuxjNwwfVLs56i_r8-T2">
+                           <i className="fa fa-file" aria-hidden='true'/>
+                        </a>
+                        
+
                         <hr style={{ borderTop: '3px solid #833fb2', width: '50%' }} />
                     </Cell>
                     <Cell className="resume-right-col" col={8}>
@@ -44,7 +52,7 @@ class Resume extends Component {
                             schoolDescription="Front-End Developer"
                         />
 
-                        <hr style={{ borderTop: '3px solid #e22947' }} />
+                        <hr style={{ borderTop: '3px solid #16a2ab' }} />
 
                         <h2>Experience</h2>
                         <ProfesionalExperience
