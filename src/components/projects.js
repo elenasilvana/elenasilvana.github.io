@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
+import ShowCard from './ShowCard';
+
+const PROJECTS = require('../data/projects.json');
+
 
 class Projects extends Component {
     constructor(props) {
@@ -12,85 +16,51 @@ class Projects extends Component {
     toggleCategories = () => {
         if (this.state.activeTab === 0) {
             /*Pokemon project Javascript */
+            const POKEMON = PROJECTS[3];
+            //console.log(POKEMON);
             return (
-                <div  className="projects-grid">      
-                <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-                    <CardTitle
-                        style={{
-                            color: '#fff',
-                            height: '176px',
-                            background: 'url(https://i.postimg.cc/LXxCwrvQ/pokeball.png) center / cover'
-                        }}
-                    >
-                        Javascript Project
-                    </CardTitle>
-                    <CardText>
-                        Conoce Pokemón es una WebApplication para conocer pokemón
-                    </CardText>
-                    <CardActions border>
-                        <Button colored>Github</Button>
-                        <Button colored>LiveDemo</Button>
-                    </CardActions>
-                    <CardMenu style={{ color: '#fff' }}>
-                        <IconButton name="share" />
-                    </CardMenu>
-                </Card>
-                </div>
+                <div  className="projects-grid">     
+                    <ShowCard 
+                    name={POKEMON.name}
+                    description={POKEMON.description}
+                    tech={POKEMON.technologies}
+                    repository={POKEMON.repository}
+                    url={POKEMON.url}
+                    />
+              </div>
             )
         }
         else if (this.state.activeTab === 1) {
             /* React Project */
+            const BQ = PROJECTS[1];
             return (
                 <div  className="projects-grid">
-                    <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-                        <CardTitle
-                            style={{
-                                color: '#fff',
-                                height: '176px',
-                                background: 'url(https://i.postimg.cc/LXxCwrvQ/pokeball.png) center / cover'
-                            }}
-                        >
-                            React JS
-                    </CardTitle>
-                        <CardText>
-                            Burger queen
-                    </CardText>
-                        <CardActions border>
-                            <Button colored onClick={()=>{console.log('boton entrando')}}>Github</Button>
-                            <Button colored>LiveDemo</Button>
-                        </CardActions>
-                        <CardMenu style={{ color: '#fff' }}>
-                            <IconButton name="share" />
-                        </CardMenu>
-                    </Card>
+                    <ShowCard 
+                    name={BQ.name}
+                    description={BQ.description}
+                    tech={BQ.technologies}
+                    repository={BQ.repository}
+                    url={BQ.url}
+                    />
                 </div>
             )
         }
         else if (this.state.activeTab === 2) {
             /* Node JS project */
+            const nodeProjects = PROJECTS.filter((project)=>{return project.technologies.indexOf('Node') > -1});
+            console.log(nodeProjects);
             return (
-                <div  className="projects-grid">             
-                <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-                    <CardTitle
-                        style={{
-                            color: 'black',
-                            height: '176px',
-                            background: 'url(https://i.postimg.cc/LXxCwrvQ/pokeball.png) center / cover'
-                        }}
-                    >
-                        Node JS
-                </CardTitle>
-                    <CardText>
-                        API REST BQ
-                </CardText>
-                    <CardActions border>
-                        <Button colored>Github</Button>
-                        <Button colored>LiveDemo</Button>
-                    </CardActions>
-                    <CardMenu style={{ color: '#fff' }}>
-                        <IconButton name="share" />
-                    </CardMenu>
-                </Card>
+                <div  className="projects-grid"> 
+                    {nodeProjects.map((project)=>( 
+                          <ShowCard 
+                          name={project.name}
+                          description={project.description}
+                          tech={project.technologies}
+                          repository={project.repository}
+                          url={project.url}
+                          />
+                    ))}            
+                
                 </div>
             )
         }
