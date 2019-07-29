@@ -17,15 +17,25 @@ class Projects extends Component {
         if (this.state.activeTab === 0) {
             /*Pokemon project Javascript */
             const POKEMON = PROJECTS[3];
+            const CIPHER = PROJECTS[4];
             //console.log(POKEMON);
             return (
                 <div  className="projects-grid">     
                     <ShowCard 
+                    img={POKEMON.img}
                     name={POKEMON.name}
                     description={POKEMON.description}
                     tech={POKEMON.technologies}
                     repository={POKEMON.repository}
                     url={POKEMON.url}
+                    />
+                     <ShowCard 
+                    img={CIPHER.img}
+                    name={CIPHER.name}
+                    description={CIPHER.description}
+                    tech={CIPHER.technologies}
+                    repository={CIPHER.repository}
+                    url={CIPHER.url}
                     />
               </div>
             )
@@ -36,6 +46,7 @@ class Projects extends Component {
             return (
                 <div  className="projects-grid">
                     <ShowCard 
+                    img={BQ.img}
                     name={BQ.name}
                     description={BQ.description}
                     tech={BQ.technologies}
@@ -53,6 +64,7 @@ class Projects extends Component {
                 <div  className="projects-grid"> 
                     {nodeProjects.map((project)=>( 
                           <ShowCard 
+                          img={project.img}
                           name={project.name}
                           description={project.description}
                           tech={project.technologies}

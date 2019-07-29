@@ -10,7 +10,7 @@ class ShowCard extends Component {
                             style={{
                                 color: '#9c0c59',
                                 height: '300px',
-                                background: 'url(https://i.postimg.cc/LXxCwrvQ/pokeball.png) center / cover',
+                                background: `url(${this.props.img}) center / cover`,
                                 alignItems: 'center'
                             }}
                         >
