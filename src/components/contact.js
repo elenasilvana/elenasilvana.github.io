@@ -7,14 +7,11 @@ class Contact extends Component {
             <div className="contact-body">
                 <Grid className="contact-grid">
                     <Cell col={6}>
-                        <h2>Elena Silvana</h2>
-                        <img
-                            src="https://avatarfiles.alphacoders.com/125/125495.jpg"
-                            alt="avatar"
-                            style={{ height: '250px' }}></img>
-                        <p style={{ margin: 'auto,', paddingTop: '1em' }}>
-                            Hi, did you liked my work?
-                        </p>
+                        <div className="contact-text">
+                            <h2>Looking for me?</h2>
+                        </div>
+                            
+                    
                     </Cell>
                     <Cell col={6}>
                         <h2>Contact Me</h2>

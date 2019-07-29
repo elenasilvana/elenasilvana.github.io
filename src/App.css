@@ -20,7 +20,10 @@
 }
 
 .projects-grid{
-  display: flex;
+  margin:auto;
+	display: -webkit-flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 /*fonts
@@ -36,14 +39,19 @@ font-family: 'Merriweather Sans', sans-serif; */
 }
 
 .contact-grid{
-  text-align: center;
+  text-align: center;;
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 550px;
+  height: 100vh;
   color: #717171;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
+/*
+.contact-text{
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+}*/
 
 .contact-grid h2{
   font-family: 'Merriweather Sans', sans-serif;
@@ -58,6 +66,14 @@ font-family: 'Merriweather Sans', sans-serif; */
   border-top: 5px dotted #9fd5d1;
   width: 50%;
   margin: auto;
+}
+
+.contact-list{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-list i{
@@ -120,11 +136,22 @@ font-family: 'Merriweather Sans', sans-serif; */
   background: -webkit-linear-gradient(to bottom, #9783b4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #9783b4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  
+
 }
 
 .resume-description i{
   font-size: 3em;
   padding: 8px;
+}
+
+.resume-description a{
+  color: white;
 }
 
 .resume-right-col{

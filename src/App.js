@@ -11,18 +11,20 @@ function App() {
     <Layout>
         <Header className="header-color" style={{color: '#4e0041'}} title="Elena Silvana" scroll>
             <Navigation>
-                <Link style={{color: '#4e0041'}} to="/resume">Resume</Link>
-                <Link style={{color: '#4e0041'}} to="/aboutme">About Me</Link>
-                <Link style={{color: '#4e0041'}} to="/projects">Projects</Link>
-                <Link style={{color: '#4e0041'}} to="/contact" >Contact</Link>
+                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/">Home</Link>
+                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/resume">Resume</Link>
+                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/aboutme">About Me</Link>
+                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/projects">Projects</Link>
+                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/contact" >Contact</Link>
             </Navigation>
         </Header>
-        <Drawer style={{color: '#4e0041', background: 'transparent'}} title="" className="header-color">
+        <Drawer style={{color: 'grey', opacity: 0.8}} title="Menu" className="header-color">
             <Navigation>
-                <Link style={{color: '#4e0041'}} to="/resume">Resume</Link>
-                <Link style={{color: '#4e0041'}} to="/aboutme">About Me</Link>
-                <Link style={{color: '#4e0041'}} to="/projects">Projects</Link>
-                <Link style={{color: '#4e0041'}} to="/contact" >Contact</Link>
+                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/">Home</Link>
+                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/resume">Resume</Link>
+                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/aboutme">About Me</Link>
+                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/projects">Projects</Link>
+                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/contact" >Contact</Link>
             </Navigation>
         </Drawer>
         <Content>
