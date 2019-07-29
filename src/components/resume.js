@@ -9,14 +9,7 @@ class Resume extends Component {
             <div>
                 <Grid>
                     <Cell className="resume-description" col={4}>
-                        <div style={{ textAlign: 'center' }}>
-                            <img
-                                src="https://avatarfiles.alphacoders.com/125/125495.jpg"
-                                alt="avatar"
-                                style={{ height: '200px' }}
-                            ></img>
-                        </div>
-                        <h2 style={{ paddingTop: '2em' }}>Elena Silvana</h2>
+                        <h2 style={{ paddingTop: '3em' }}>Elena Silvana</h2>
                         <h4 style={{ color: '#d9d9d9' }}>Front-End Developer</h4>
                         <hr style={{ borderTop: '3px solid #833fb2', width: '50%' }} />
                         <h3>Contact Me :)!</h3>

@@ -91,7 +91,7 @@ font-family: 'Merriweather Sans', sans-serif; */
 }
 
 .banner-text{
-  background-color: black;
+  background-color: #5dc1b9;
   opacity: .8;
   width: 75%;
   margin: auto;
@@ -101,7 +101,8 @@ font-family: 'Merriweather Sans', sans-serif; */
 .banner-text h2{
   font-size: 50px;
   font-weight: bold;
-  color: white;
+  color: #004357;
+  margin-top: 1em;
 }
 
 .banner-text hr {
@@ -111,7 +112,7 @@ font-family: 'Merriweather Sans', sans-serif; */
 }
 
 .banner-text p {
-  color: white;
+  color: #001a57;
   font-size: 20px;
   padding: 1em;
 }

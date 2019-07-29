@@ -4,6 +4,8 @@ import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import Main from './components/main';
 import { Link } from 'react-router-dom';
 
+/* */
+
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
             <Navigation>
                 <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/">Home</Link>
                 <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/resume">Resume</Link>
-                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/aboutme">About Me</Link>
+
                 <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/projects">Projects</Link>
                 <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/contact" >Contact</Link>
             </Navigation>
@@ -22,7 +24,7 @@ function App() {
             <Navigation>
                 <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/">Home</Link>
                 <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/resume">Resume</Link>
-                <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/aboutme">About Me</Link>
+
                 <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/projects">Projects</Link>
                 <Link style={{color: '#4e0041', fontSize: '1.5em'}} to="/contact" >Contact</Link>
             </Navigation>
