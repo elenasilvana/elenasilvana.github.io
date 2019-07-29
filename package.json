@@ -18,6 +18,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elenasilvana/portafolio.git"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -32,5 +36,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://elenasilvana.github.io/portafolio"
 }
