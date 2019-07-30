@@ -1,6 +1,6 @@
 [
     {  "name": "BQ BackEnd",
-        "img": "https://i.postimg.cc/RZk1b41Y/Selection-030.png",
+        "img": "https://i.postimg.cc/R0m2BVPy/node-js-background.jpg",
         "category": "Front-end development",
         "deliverable": "API",
         "description": "Web Server created with Node JS that handles requests from client (Burger Queen App) also manages database (MongoDB) communication.",
@@ -35,7 +35,7 @@
 	{
 		
         "name": "MD-links",
-        "img": "https://i.postimg.cc/C55mpJRr/md-links.jpg",
+        "img": "https://i.postimg.cc/R0m2BVPy/node-js-background.jpg",
         "category": "Front-end development",
         "deliverable": "npm package",
         "description": "Command line application that validates if markdown files are available.",

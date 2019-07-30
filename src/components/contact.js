@@ -20,7 +20,7 @@ class Contact extends Component {
                         <div className="contact-list">
                             <List>
                                 <ListItem>
-                                    <ListItemContent style={{ fontSize: '30px', fontFamily: 'Merriweather Sans', color: '#9da1aa' }}>
+                                    <ListItemContent style={{ fontSize: '1.8em', fontFamily: 'Merriweather Sans', color: '#9da1aa' }}>
                                         <a
                                         href="mailto:ele.silvana.c@gmail.com">
                                             <i className="fa fa-envelope" aria-hidden='true' />
@@ -29,7 +29,7 @@ class Contact extends Component {
                                         </ListItemContent>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemContent style={{ fontSize: '30px', fontFamily: 'Merriweather Sans', color: '#9da1aa' }}>
+                                    <ListItemContent style={{ fontSize: '1.8em', fontFamily: 'Merriweather Sans', color: '#9da1aa' }}>
                                         <a
                                             target="_blank"
                                             href="https://github.com/elenasilvana">
@@ -38,7 +38,7 @@ class Contact extends Component {
                                         </a>
                                     </ListItemContent>
                                 </ListItem><ListItem>
-                                    <ListItemContent style={{ fontSize: '30px', fontFamily: 'Merriweather Sans', color: '#9da1aa' }}>
+                                    <ListItemContent style={{ fontSize: '1.8em', fontFamily: 'Merriweather Sans', color: '#9da1aa' }}>
                                         <a
                                             target="_blank"
                                             href="https://www.linkedin.com/in/elena-silvana-c/">

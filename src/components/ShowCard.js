@@ -5,18 +5,18 @@ import { Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } 
 class ShowCard extends Component {
     render(){
         return(
-            <Card shadow={5} style={{ minWidth: '300px', margin: 'auto' }}>
+            <Card shadow={5} style={{ minWidth: '40vh', margin: 'auto' }}>
                         <CardTitle
                             style={{
                                 color: '#9c0c59',
-                                height: '300px',
+                                height: '40vh',
                                 background: `url(${this.props.img}) center / cover`,
                                 alignItems: 'center'
                             }}
                         >
-                           {this.props.name}
                     </CardTitle>
                         <CardText>
+                           {this.props.name} <hr/>
                             {this.props.description}
                             <h5>Technologies:</h5>
                             {this.props.tech}
