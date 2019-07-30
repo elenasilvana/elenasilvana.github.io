@@ -14,10 +14,10 @@ class Contact extends Component {
                     
                     </Cell>
                     <Cell col={6}>
+                        <div className="contact-list">
                         <h2>Contact Me</h2>
                         <hr />
 
-                        <div className="contact-list">
                             <List>
                                 <ListItem>
                                     <ListItemContent style={{ fontSize: '1.8em', fontFamily: 'Merriweather Sans', color: '#9da1aa' }}>

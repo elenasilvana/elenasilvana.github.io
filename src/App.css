@@ -48,11 +48,16 @@ font-family: 'Merriweather Sans', sans-serif; */
   /*margin-bottom: 20px;*/
 }
 
-/*
+
 .contact-text{
-  writing-mode: tb-rl;
-  -webkit-transform: rotate(180deg);
-}*/
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+
+}
 
 .contact-grid h2{
   font-family: 'Merriweather Sans', sans-serif;
@@ -79,7 +84,7 @@ font-family: 'Merriweather Sans', sans-serif; */
 
 .contact-list i{
   font-size: 3em;
-  padding-right: 4rem;
+  padding: 1rem;
   color: #81d8d0;
 }
 
