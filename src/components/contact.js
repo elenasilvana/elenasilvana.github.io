@@ -24,7 +24,6 @@ class Contact extends Component {
                                         <a
                                         href="mailto:ele.silvana.c@gmail.com">
                                             <i className="fa fa-envelope" aria-hidden='true' />
-                                            ele.silvana.c@gmail.com
                                         </a>
                                         </ListItemContent>
                                 </ListItem>
@@ -34,7 +33,6 @@ class Contact extends Component {
                                             target="_blank"
                                             href="https://github.com/elenasilvana">
                                                 <i className="fa fa-github" aria-hidden='true' />
-                                                elenasilvana
                                         </a>
                                     </ListItemContent>
                                 </ListItem><ListItem>
@@ -43,7 +41,6 @@ class Contact extends Component {
                                             target="_blank"
                                             href="https://www.linkedin.com/in/elena-silvana-c/">
                                                 <i className="fa fa-linkedin" aria-hidden='true' />
-                                                elena-silvana-c
                                         </a>
 
                                     </ListItemContent>

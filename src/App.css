@@ -47,6 +47,7 @@ font-family: 'Merriweather Sans', sans-serif; */
   color: #717171;
   /*margin-bottom: 20px;*/
 }
+
 /*
 .contact-text{
   writing-mode: tb-rl;
@@ -94,6 +95,9 @@ font-family: 'Merriweather Sans', sans-serif; */
 .banner-text{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
   background-color: #5dc1b9;
   opacity: .8;
   width: 75%;
@@ -134,7 +138,7 @@ font-family: 'Merriweather Sans', sans-serif; */
 .social-links i{
   color: white;
   font-size: 5em;
-  padding: 0.4em;
+  padding: 30%;
 }
 
 /*Resume page */
