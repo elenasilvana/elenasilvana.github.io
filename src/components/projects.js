@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
+import { Tabs, Tab, Grid, Cell } from 'react-mdl';
 import ShowCard from './ShowCard';
 
 const PROJECTS = require('../data/projects.json');
@@ -42,17 +42,21 @@ class Projects extends Component {
         }
         else if (this.state.activeTab === 1) {
             /* React Project */
-            const BQ = PROJECTS[1];
+            const reactProjects = PROJECTS.filter((project)=>{return project.technologies.indexOf('React') > -1});
+            console.log(reactProjects);
             return (
-                <div  className="projects-grid">
-                    <ShowCard 
-                    img={BQ.img}
-                    name={BQ.name}
-                    description={BQ.description}
-                    tech={BQ.technologies}
-                    repository={BQ.repository}
-                    url={BQ.url}
-                    />
+                <div  className="projects-grid"> 
+                    {reactProjects.map((project)=>( 
+                          <ShowCard 
+                          img={project.img}
+                          name={project.name}
+                          description={project.description}
+                          tech={project.technologies}
+                          repository={project.repository}
+                          url={project.url}
+                          />
+                    ))}            
+                
                 </div>
             )
         }

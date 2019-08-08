@@ -1,4 +1,22 @@
 [
+    {
+        "name": "Hands language",
+        "img": "https://i.postimg.cc/yxK8FVq2/Selection-054.png",
+        "category": "Front-end development",
+        "deliverable": "WebApplication",
+        "description": "WebApplication for learning and practice Mexican Sign Alphabet",
+        "url": "https://elenasilvana.github.io/TalentFestGDL002/",
+        "technologies": "React, Materialize",
+        "uexd": "",
+        "frontskills": "",
+        "type":"team collaboration",
+        "tools": "Git, Github",
+        "metodologies": "AGILE, kanban, User Story, sprint planning",
+        "repository": "https://github.com/elenasilvana/TalentFestGDL002",
+        "route": "BURGERQUEEN",
+        "id":"burger-queen"
+
+    },
     {  "name": "BQ BackEnd",
         "img": "https://i.postimg.cc/R0m2BVPy/node-js-background.jpg",
         "category": "Front-end development",
@@ -21,7 +39,7 @@
         "deliverable": "WebApplication",
         "description": "WebApplication for restaurants to take orders, send the orders to the kitchen and check which orders are ready",
         "url": "https://elenasilvana.github.io/GDL002-burger-queen/",
-        "technologies": "React, ReactBootstrap, Firebase",
+        "technologies": "React, Materialize",
         "uexd": "",
         "frontskills": "",
         "type":"individual",

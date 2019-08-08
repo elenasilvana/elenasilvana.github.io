@@ -42,10 +42,9 @@ class Resume extends Component {
                                 </ListItem>
                             </List>
                         <hr style={{ borderTop: '3px solid #833fb2', width: '50%' }} />
-                        <h4>CV</h4>
                         <a target="_blank"
-                        href="https://drive.google.com/open?id=1ZVq1r7mKTM9fWuxjNwwfVLs56i_r8-T2">
-                           <i className="fa fa-file" aria-hidden='true'/>
+                        href="https://drive.google.com/open?id=17CXfyu-uVNB9Xx-8IharXbQG1mRbBEem">
+                            <h4>CV</h4>
                         </a>
                         
 
