@@ -1,5 +1,23 @@
 [
     {
+        "name": "Japanese Syllabaries",
+        "img": "https://i.postimg.cc/3x7BnJSG/Selection-072.png",
+        "category": "Front-end development",
+        "deliverable": "WebApplication",
+        "description": "WebApplication for learning and practice Japanese Syllabaries",
+        "url": "https://elenasilvana.github.io/jp-syllabaries",
+        "technologies": "React, React-Hooks",
+        "uexd": "",
+        "frontskills": "",
+        "type":"Personal project",
+        "tools": "Git, Github",
+        "metodologies": "AGILE, kanban, User Story, sprint planning",
+        "repository": "https://github.com/elenasilvana/jp-syllabaries",
+        "route": "BURGERQUEEN",
+        "id":"japanese-syllabary"
+
+    },
+    {
         "name": "Hands language",
         "img": "https://i.postimg.cc/yxK8FVq2/Selection-054.png",
         "category": "Front-end development",
@@ -14,7 +32,7 @@
         "metodologies": "AGILE, kanban, User Story, sprint planning",
         "repository": "https://github.com/elenasilvana/TalentFestGDL002",
         "route": "BURGERQUEEN",
-        "id":"burger-queen"
+        "id":"hand-languaje"
 
     },
     {  "name": "BQ BackEnd",
