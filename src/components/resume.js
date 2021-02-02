@@ -23,7 +23,11 @@ class Resume extends Component {
               </ListItem>
               <ListItem>
                 <ListItemContent style={{ color: "#9da1aa" }}>
-                  <a target="_blank" href="https://github.com/elenasilvana">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/elenasilvana"
+                  >
                     <i className="fa fa-github" aria-hidden="true" />
                   </a>
                 </ListItemContent>
@@ -32,6 +36,7 @@ class Resume extends Component {
                 <ListItemContent style={{ color: "#9da1aa" }}>
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://www.linkedin.com/in/elena-silvana-c/"
                   >
                     <i className="fa fa-linkedin" aria-hidden="true" />
@@ -42,6 +47,7 @@ class Resume extends Component {
             <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://drive.google.com/file/d/1Yk1W5lNjnGI-Ln3EGFPG1qoBNQr3Qz-C/view?usp=sharing"
             >
               <h4>CV</h4>
@@ -70,9 +76,15 @@ class Resume extends Component {
             <h2>Experience</h2>
 
             <ProfesionalExperience
+              startYear={2020}
+              projectName="Fullstack developer at Blue Yonder"
+              projectDescription="2020 - to date. Working mostly as front-end with React applications. Tecnologies such as React, Typescript, React hooks, Storybook, Material UI"
+            />
+
+            <ProfesionalExperience
               startYear={2019}
               projectName="Front-end developer at Itexico"
-              projectDescription="2019 - to date. Working with technologies such as React JS, Typescript, Redux, Redux saga, React hooks, SASS"
+              projectDescription="2019 - 2020. Working with technologies such as React JS, Typescript, Redux, Redux saga, React hooks, SASS"
             />
 
             <ProfesionalExperience

@@ -17,15 +17,20 @@ class Landing extends Component {
               <hr />
               <p>
                 {" "}
-                Javascript | React | Typescript | Redux | NodeJS | HTML/CSS |
-                SASS | Express | MongoDB
+                Javascript | React | Typescript | Redux | Material UI |
+                Storybook | NodeJS | HTML/CSS | SASS | Express | MongoDB
               </p>
               <div className="social-links">
-                <a target="_blank" href="https://github.com/elenasilvana">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/elenasilvana"
+                >
                   <i className="fa fa-github" aria-hidden="true" />
                 </a>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.linkedin.com/in/elena-silvana-c/"
                 >
                   <i className="fa fa-linkedin" aria-hidden="true" />
