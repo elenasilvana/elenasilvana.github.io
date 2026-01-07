@@ -25,7 +25,7 @@ class Contact extends Component {
                       color: "#9da1aa",
                     }}
                   >
-                    <a href="mailto:ele.silvana.c@gmail.com">
+                    <a href="mailto:elena.s.casillas@gmail.com">
                       <i className="fa fa-envelope" aria-hidden="true" />
                     </a>
                   </ListItemContent>
