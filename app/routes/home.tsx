@@ -2,7 +2,7 @@ import type { Route } from './+types/home';
 import { AboutContent } from '~/components/about';
 import { ExperienceContent } from '~/components/experience';
 import { ProjectsContent } from '~/components/projects';
-import { createRef, useContext, useEffect, useRef } from 'react';
+import { createRef, useContext, useEffect, useRef, useState } from 'react';
 import SelectionContext from '~/context/sectionContext';
 import { sectionIds } from '~/sections';
 
@@ -18,36 +18,61 @@ export default function Home() {
 	const refSections = createRef<any[]>();
 	refSections.current = [];
 
+
+
+
+  useEffect(() => {
+    const index = getSectionIndex(sectionIds, selectedSection.selectedSection)
+	console.log('index', index)
+	console.log('selectedSection', selectedSection)
+    if (index) {
+      refScroll?.current.children[index].scrollIntoView()
+    }
+  },[selectedSection.selectedSection, refSections.current, refScroll?.current])
+
+  	const getActiveSection = () => {
+		for (let i = sectionIds.length - 1; i >= 0; i--) {
+			const section = document.getElementById(sectionIds[i]);
+			if (section) {
+				const rect = section.getBoundingClientRect();
+				if (rect.top <= 120 && rect.bottom >= 120) {
+					//set the active link based on the section ID
+					// setActiveSection(sectionIds[i]);
+					selectedSection.setSelectedSection(sectionIds[i])
+					break;
+				}
+			}
+		}
+	};
+
+	useEffect(() => {
+		// replace with useIsVisible? https://barcelonacodeschool.com/how-to-detect-if-element-is-in-view-with-react ???
+		const handleScroll = () => {
+			// if (window.scrollY > 300) {
+			// 	setIsScrolled(true);
+			// } else {
+			// 	setIsScrolled(false);
+			// }
+			//determine the active section while scrolling
+			getActiveSection();
+		};
+		window.addEventListener('scroll', handleScroll);
+
+		//remove the scroll event listener
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, []);
+
 	const handleScrollTop = () => {
 		refScroll.current?.scrollIntoView({ behavior: 'smooth' });
 	};
 
 	const getSectionIndex = (idList: string[], section: string) => {
 		return idList.findIndex((id) =>
-      id == section
-    );
+     		 id == section
+    	);
 	};
-
-  useEffect(() => {
-    const index = getSectionIndex(sectionIds, selectedSection.selectedSection)
-    if (index) {
-      refScroll?.current.children[index].scrollIntoView()
-    }
-    console.log('index', index)
-     console.log('selectedSection', selectedSection)
-  },[selectedSection.selectedSection, refSections.current, refScroll?.current])
-
-	// useEffect(() => {
-	// 	const el = refScroll.current?.children;
-	// 	//console.log('%c ref', 'color: hotpink; font-size: 20px', el);
-	// }, [refScroll.current]);
-
-	// const addToRef = (el: any) => {
-	// 	if (el && refSections && !refSections.current?.includes(el)) {
-	// 		refSections.current!.push(el);
-	// 	}
-	// 	console.log('%c sections', 'color: peru;', refSections);
-	// };
 
 	return (
 		<div ref={refScroll}>

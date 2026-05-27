@@ -3,7 +3,6 @@ export const ExperienceContent = () => {
 		<section
 			id='experience'
 			style={{
-				background: 'peru',
 				minHeight: '100vh',
 				textAlign: 'center',
 				display: 'flex',

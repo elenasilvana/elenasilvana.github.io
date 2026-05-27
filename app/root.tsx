@@ -12,9 +12,15 @@ import './app.css';
 import { NavBar } from './components/navbar';
 import SelectionContext from './context/sectionContext';
 import { useState } from 'react';
+import { Container, createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import { themeOptions } from './theme/theme';
+import EnhancedNavBar from './components/enhancedNavbar';
+
+const theme = createTheme(themeOptions);
 
 export function Layout({ children }: { children: React.ReactNode }) {
 	const [selectedSection, setSelectedSection] = useState('about')
+	const [sectionOnView, setSectionOnView] = useState('about')
 	return (
 		<html lang='en'>
 			<head>
@@ -25,14 +31,29 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<Links />
 			</head>
 			<body>
-				<SelectionContext.Provider value={{selectedSection, setSelectedSection}}>		
-					<div style={{background: 'gray', height: '100%', display: 'flex', flexDirection: 'row'}}>
-						<div style={{background: 'purple', width: 200}}>
-							<NavBar />
-						</div>
-						<div style={{background: 'whitesmoke', width: '100%', height: '100%'}} >{children}</div>
-					</div>
-				</SelectionContext.Provider>
+				<ThemeProvider theme={theme}>
+					<CssBaseline enableColorScheme />
+					<SelectionContext.Provider value={{
+						selectedSection, 
+						setSelectedSection,
+						sectionOnView,
+						setSectionOnView
+						}}>
+						<Container 
+						 	maxWidth="xl"
+							component="main"
+							sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}
+						>	
+							<EnhancedNavBar />
+						
+								{/* <div>
+									<NavBar />
+								</div> */}
+								{children}
+
+						</Container>		
+					</SelectionContext.Provider>
+				</ThemeProvider>
 				<ScrollRestoration />
 				<Scripts />
 			</body>
