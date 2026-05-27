@@ -20,7 +20,6 @@ const theme = createTheme(themeOptions);
 
 export function Layout({ children }: { children: React.ReactNode }) {
 	const [selectedSection, setSelectedSection] = useState('about')
-	const [sectionOnView, setSectionOnView] = useState('about')
 	return (
 		<html lang='en'>
 			<head>
@@ -35,9 +34,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 					<CssBaseline enableColorScheme />
 					<SelectionContext.Provider value={{
 						selectedSection, 
-						setSelectedSection,
-						sectionOnView,
-						setSectionOnView
+						setSelectedSection
 						}}>
 						<Container 
 						 	maxWidth="xl"

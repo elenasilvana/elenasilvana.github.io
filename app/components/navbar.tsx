@@ -17,7 +17,6 @@ export const NavBar = () => {
 				if (rect.top <= 120 && rect.bottom >= 120) {
 					//set the active link based on the section ID
 					// setActiveSection(sectionIds[i]);
-					// selectedSection.setSectionOnView(sectionIds[i])
 					selectedSection.setSelectedSection(sectionIds[i])
 					break;
 				}
