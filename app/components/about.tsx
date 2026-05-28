@@ -8,7 +8,6 @@ export const AboutContent = () => {
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
             >
                 <Grid
-                    // style={{ background: 'hotpink' }}
                     size={{
                         xs: 12,
                         sm: 4,
@@ -16,10 +15,9 @@ export const AboutContent = () => {
                         lg: 6,
                     }}
                     sx={{ minHeight: 160 }}>
-                    <Typography variant="h1" color="primary">About Me</Typography>
+                    <Typography variant="h2" color="primary">About Me</Typography>
                 </Grid>
                 <Grid
-                    // style={{ background: 'blue' }}
                     size={{
                         xs: 12,
                         sm: 4,
@@ -62,7 +60,6 @@ export const AboutContent = () => {
                         </Typography>
                         <Divider />
                         <Box
-                        // style={{ background: 'pink' }}
                         >
                             <List>
 
@@ -100,7 +97,10 @@ export const AboutContent = () => {
                         ))}
                     </List>
                 </Grid>
-
+                <Grid size={12}
+                    sx={{ minHeight: 160 }}>
+                    <Divider />
+                </Grid>
             </Grid>
         </section>
     )

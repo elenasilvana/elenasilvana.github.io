@@ -7,7 +7,8 @@ export const ExperienceListItem = ({
     dateRange,
     location,
     hasSingleRow,
-    hasSlashDivider
+    hasSlashDivider,
+    description
 }: any) => {
     const { startDate, endDate } = dateRange;
     const dateDivider = hasSlashDivider ? '/' : '-';
@@ -40,6 +41,11 @@ export const ExperienceListItem = ({
                         {location && (
                             <Typography>
                                 {location}
+                            </Typography>
+                        )}
+                        {description && (
+                            <Typography>
+                                {description}
                             </Typography>
                         )}
                     </React.Fragment>
