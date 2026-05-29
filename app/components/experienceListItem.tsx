@@ -1,5 +1,6 @@
-import { ListItem, ListItemText, Typography } from "@mui/material";
+import { Box, ListItem, ListItemText, Typography } from "@mui/material";
 import React from "react";
+import { DividerContainer } from "~/styles/common-components";
 
 export const ExperienceListItem = ({
     title,
@@ -11,24 +12,27 @@ export const ExperienceListItem = ({
     description
 }: any) => {
     const { startDate, endDate } = dateRange;
-    const dateDivider = hasSlashDivider ? '/' : '-';
+    const dateDivider = hasSlashDivider ? ' / ' : ' - ';
     const date = `${startDate} ${dateDivider} ${endDate}`
-    const dot = '·'
-    const titleFormat = hasSingleRow ? `${title} ${dot} ${institution}` : title
+    const titleFormat = hasSingleRow ? `${title} · ${institution}` : title
 
     return (
-        <ListItem>
+        <ListItem disableGutters>
             <ListItemText
                 primary={
                     <Typography variant="h4" color="secondary">
-                        {date}
+                        {startDate}
+                        <DividerContainer component="span">
+                            {dateDivider}
+                        </DividerContainer>
+                        {endDate}
                     </Typography>
                 }
                 secondary={
                     <React.Fragment>
                         <Typography
                             component="span"
-                            variant="body1"
+                           color="secondary"
                             sx={{ color: 'secondary', display: 'inline' }}
                         >
                             {titleFormat}
@@ -39,7 +43,7 @@ export const ExperienceListItem = ({
                             </Typography>
                         )}
                         {location && (
-                            <Typography>
+                            <Typography color="secondary">
                                 {location}
                             </Typography>
                         )}

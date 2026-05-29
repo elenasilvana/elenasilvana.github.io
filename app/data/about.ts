@@ -19,3 +19,31 @@ export const languageDetails = [
     { "language": "english", "level": 'fluent' },
     { "language": "german", "level": 'intermediate' }
 ]
+
+export const softSkills = [
+    "Self-learning",
+    "Adaptability",
+    "Organization",
+    "Collaborative work",
+    "Comunication"
+]
+
+export const technologies = [
+    "React JS",
+    "Typescript",
+    "Redux",
+    "Git",
+    "Node JS",
+    "Express",
+    "mongoDB",
+    "Linux",
+    "Python",
+]
+
+export const methodologies = [
+    "AGILE",
+    "SCRUM",
+    "Kanban",
+    "Jira",
+    "TDD",
+]

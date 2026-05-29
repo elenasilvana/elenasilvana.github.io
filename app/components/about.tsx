@@ -1,6 +1,8 @@
-import { Box, Divider, Grid, List, ListItem, ListItemText, Typography } from "@mui/material"
-import { educationDetails, languageDetails } from "~/data/about";
+import { Box, Chip, Divider, Grid, List, ListItem, ListItemText, Typography } from "@mui/material"
+import { educationDetails, languageDetails, methodologies, softSkills, technologies } from "~/data/about";
 import { ExperienceListItem } from "./experienceListItem";
+import { Language, School } from "@mui/icons-material";
+import { IconContainer } from "~/styles/common-components";
 
 export const AboutContent = () => {
     return (
@@ -15,6 +17,17 @@ export const AboutContent = () => {
                         lg: 6,
                     }}
                     sx={{ minHeight: 160 }}>
+                    <Box style={{ display: 'flex', width: '100%', flexDirection: 'column' }}>
+                        <Box component="span">
+                            <Typography sx={{ fontWeight: 'bold' }} variant="h2" color="primary">Elena Silvana</Typography>
+                            <Typography sx={{ fontWeight: 'bold' }} variant="h2" color="secondary">Casillas</Typography>
+                        </Box>
+                        <Box component="span">
+                            <Typography sx={{ fontWeight: 'bold' }} variant="h3">Front-End</Typography>
+                            <Typography sx={{ fontWeight: 'bold' }} variant="h3" style={{ background: 'purple' }}>Developer</Typography>
+                        </Box>
+
+                    </Box>
                     <Typography variant="h2" color="primary">About Me</Typography>
                 </Grid>
                 <Grid
@@ -55,10 +68,16 @@ export const AboutContent = () => {
                         lg: 8,
                     }} >
                     <Box>
-                        <Typography color="primary">
-                            Education
-                        </Typography>
-                        <Divider />
+                        <Box style={{ display: 'flex' }}>
+                            <IconContainer>
+
+                                <School color="secondary" />
+                            </IconContainer>
+                            <Typography color="secondary">
+                                Education
+                            </Typography>
+
+                        </Box>
                         <Box
                         >
                             <List>
@@ -84,18 +103,110 @@ export const AboutContent = () => {
                         lg: 4,
                     }}
                 >
-                    <Typography color="primary">
-                        Languages
-                    </Typography>
-                    <List>
-                        {languageDetails.map(({ language, level }) => (
-                            <ListItem>
-                                <ListItemText
-                                    primary={`${language} ${level}`}
-                                />
-                            </ListItem>
-                        ))}
-                    </List>
+                    <Box>
+                        <Box style={{ display: 'flex' }}>
+                            <IconContainer>
+
+                                <Language color="secondary" />
+                            </IconContainer>
+                            <Typography color="secondary">
+                                Languages
+                            </Typography>
+                        </Box>
+                        <Box>
+
+                            <List>
+                                {languageDetails.map(({ language, level }) => (
+                                    <ListItem disableGutters disablePadding>
+                                        <ListItemText
+                                            primary={`${language} ${level}`}
+                                        />
+                                    </ListItem>
+                                ))}
+                            </List>
+
+                        </Box>
+                    </Box>
+                </Grid>
+                <Grid
+                    size={{
+                        xs: 12,
+                        sm: 4,
+                        md: 4,
+                        lg: 4,
+                    }} >
+                    <Box>
+                        <Box style={{ display: 'flex' }}>
+                            <Typography color="secondary">
+                                Softskills
+                            </Typography>
+
+                        </Box>
+                        <Box
+                        >
+                            {softSkills.map((skill) => (
+                                <ListItem disableGutters >
+                                     <Chip label={skill} variant="outlined" color="secondary" size="small" />
+                                    {/* <ListItemText primary={skill} /> */}
+                                </ListItem>
+                            ))}
+
+                        </Box>
+
+                    </Box>
+                </Grid>
+                <Grid
+                    size={{
+                        xs: 12,
+                        sm: 4,
+                        md: 4,
+                        lg: 4,
+                    }} >
+                    <Box>
+                        <Box style={{ display: 'flex' }}>
+                            <Typography color="secondary">
+                                Technologies
+                            </Typography>
+
+                        </Box>
+                        <Box
+                        >
+                            <List>
+                                {technologies.map((technology) => (
+                                    <ListItem disableGutters >
+                                        <Chip label={technology} variant="outlined" color="secondary" size="small" />
+                                    </ListItem>
+                                ))}
+                            </List>
+
+                        </Box>
+
+                    </Box>
+                </Grid>
+                <Grid
+                    size={{
+                        xs: 12,
+                        sm: 4,
+                        md: 4,
+                        lg: 4,
+                    }} >
+                    <Box>
+                        <Box style={{ display: 'flex' }}>
+                            <Typography color="secondary">
+                                Methodologies
+                            </Typography>
+
+                        </Box>
+                        <Box
+                        >
+                            {methodologies.map((methodology) => (
+                                <ListItem disableGutters >
+                                    <Chip label={methodology} variant="outlined" color="secondary" size="small" />
+                                </ListItem>
+                            ))}
+                        </Box>
+
+                    </Box>
                 </Grid>
                 <Grid size={12}
                     sx={{ minHeight: 160 }}>
