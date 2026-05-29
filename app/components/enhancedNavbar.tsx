@@ -11,12 +11,15 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { sectionIds } from '~/sections';
 import SelectionContext from '~/context/sectionContext';
+import { Badge, Link } from '@mui/material';
+import { AccountCircle, LinkedIn, Mail } from '@mui/icons-material';
+import { GitHub } from '@mui/icons-material';
 
 
 function EnhancedNavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-    const selectedSection = React.useContext(SelectionContext)
+  const selectedSection = React.useContext(SelectionContext)
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -70,7 +73,7 @@ function EnhancedNavBar() {
               ))}
             </Menu>
           </Box>
-        
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {sectionIds.map((sectionId) => (
               <Button
@@ -82,6 +85,39 @@ function EnhancedNavBar() {
                 {sectionId}
               </Button>
             ))}
+          </Box>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
+              <IconButton
+                size="large"
+                edge="end"
+                aria-label="account of current user"
+                color="secondary"
+              >
+                <GitHub />
+              </IconButton>
+            </Link>
+            <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
+              <IconButton
+                size="large"
+                edge="end"
+                aria-label="account of current user"
+                color="secondary"
+              >
+                <LinkedIn />
+              </IconButton>
+            </Link>
+            <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
+              <IconButton
+                size="large"
+                edge="end"
+                aria-label="account of current user"
+                color="secondary"
+              >
+                <Mail />
+              </IconButton>
+            </Link>
           </Box>
         </Toolbar>
       </Container>
