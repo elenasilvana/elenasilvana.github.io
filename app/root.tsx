@@ -13,13 +13,13 @@ import { NavBar } from './components/navbar';
 import SelectionContext from './context/sectionContext';
 import { useState } from 'react';
 import { Container, createTheme, CssBaseline, ThemeProvider } from '@mui/material';
-import { themeOptions } from './theme/theme';
+import { theme } from './theme/theme';
 import EnhancedNavBar from './components/enhancedNavbar';
-
-const theme = createTheme(themeOptions);
 
 export function Layout({ children }: { children: React.ReactNode }) {
 	const [selectedSection, setSelectedSection] = useState('about')
+
+	console.log('theme.palette', theme.palette)
 	return (
 		<html lang='en'>
 			<head>
@@ -39,7 +39,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 						<Container 
 						 	maxWidth="xl"
 							component="main"
-							sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}
+							sx={{ display: 'flex', flexDirection: 'column' }}
+							disableGutters
 						>	
 							<EnhancedNavBar />
 						
