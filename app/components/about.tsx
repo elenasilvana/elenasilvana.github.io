@@ -1,12 +1,15 @@
-import { Box, Chip, Divider, Grid, List, ListItem, ListItemText, Typography } from "@mui/material"
+import { Box, Chip, Divider, Grid, List, ListItem, ListItemText, Typography, useTheme } from "@mui/material"
 import { educationDetails, languageDetails, methodologies, softSkills, technologies } from "~/data/about";
 import { ExperienceListItem } from "./experienceListItem";
-import { Height, Language, School } from "@mui/icons-material";
-import { IconContainer } from "~/styles/common-components";
+import { Language, School } from "@mui/icons-material";
+import { Container, IconContainer } from "~/styles/common-components";
 
 export const AboutContent = () => {
+    const theme = useTheme()
+
+    console.log('%c THEME ', 'color:red;', theme.palette.mistlavander.main)
     return (
-        <section id="about" style={{ minHeight: '100vh' }}>
+        <section id="about">
             <Grid container rowSpacing={2}
                 columnSpacing={3}
             >
@@ -21,8 +24,8 @@ export const AboutContent = () => {
                         lg: 12,
                     }}
                     sx={{ minHeight: 160 }}>
-                    <Box style={{ display: 'flex', width: '100%'}}>
-                        <Box style={{paddingRight: 16}}component="span">
+                    <Container flex width={'100%'} flexWrap justifyContent="flex-start">
+                        <Box style={{ paddingRight: 16 }} component="span">
                             <Typography sx={{ fontWeight: 'bold' }} variant="h2" color="primary">Elena Silvana</Typography>
                             <Typography sx={{ fontWeight: 'bold' }} variant="h2" color="secondary">Casillas</Typography>
                         </Box>
@@ -30,8 +33,7 @@ export const AboutContent = () => {
                             <Typography sx={{ fontWeight: 'bold' }} variant="h3">Front-End</Typography>
                             <Typography sx={{ fontWeight: 'bold' }} variant="h3" style={{ background: 'purple' }}>Developer</Typography>
                         </Box>
-
-                    </Box>
+                    </Container>
                 </Grid>
 
                 <Grid
@@ -82,16 +84,14 @@ export const AboutContent = () => {
                         lg: 8,
                     }} >
                     <Box>
-                        <Box style={{ display: 'flex' }}>
+                        <Container flex>
                             <IconContainer>
-
-                                <School color="secondary" />
+                                <School fontSize="large" color={theme.palette.mistlavander.main} />
                             </IconContainer>
-                            <Typography color="secondary">
+                            <Typography variant="overline" color="primary">
                                 Education
                             </Typography>
-
-                        </Box>
+                        </Container>
                         <Box
                         >
                             <List>
@@ -118,15 +118,15 @@ export const AboutContent = () => {
                     }}
                 >
                     <Box>
-                        <Box style={{ display: 'flex' }}>
+                        <Container flex>
                             <IconContainer>
 
-                                <Language color="secondary" />
+                                <Language fontSize="large" color={theme.palette.mistlavander.main} />
                             </IconContainer>
-                            <Typography color="secondary">
+                            <Typography variant="overline" color="primary">
                                 Languages
                             </Typography>
-                        </Box>
+                        </Container>
                         <Box>
 
                             <List>
@@ -150,12 +150,12 @@ export const AboutContent = () => {
                         lg: 4,
                     }} >
                     <Box>
-                        <Box style={{ display: 'flex' }}>
-                            <Typography color="secondary">
+                        <Container flex>
+                            <Typography variant="overline" color="primary">
                                 Softskills
                             </Typography>
 
-                        </Box>
+                        </Container>
                         <Box
                         >
                             {softSkills.map((skill) => (
@@ -177,12 +177,12 @@ export const AboutContent = () => {
                         lg: 4,
                     }} >
                     <Box>
-                        <Box style={{ display: 'flex' }}>
-                            <Typography color="secondary">
+                        <Container flex>
+                            <Typography variant="overline" color="primary">
                                 Technologies
                             </Typography>
 
-                        </Box>
+                        </Container>
                         <Box
                         >
                             <List>
@@ -205,12 +205,12 @@ export const AboutContent = () => {
                         lg: 4,
                     }} >
                     <Box>
-                        <Box style={{ display: 'flex' }}>
-                            <Typography color="secondary">
+                        <Container flex>
+                            <Typography variant="overline" color="primary">
                                 Methodologies
                             </Typography>
 
-                        </Box>
+                        </Container>
                         <Box
                         >
                             {methodologies.map((methodology) => (

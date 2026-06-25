@@ -1,6 +1,6 @@
-import { Box, ListItem, ListItemText, Typography } from "@mui/material";
+import { Box, ListItem, ListItemText, Typography, useTheme } from "@mui/material";
 import React from "react";
-import { DividerContainer } from "~/styles/common-components";
+import { DividerContainer, TransformedTypography } from "~/styles/common-components";
 
 export const ExperienceListItem = ({
     title,
@@ -11,6 +11,7 @@ export const ExperienceListItem = ({
     hasSlashDivider,
     description
 }: any) => {
+    const theme = useTheme()
     const { startDate, endDate } = dateRange;
     const dateDivider = hasSlashDivider ? ' / ' : ' - ';
     const date = `${startDate} ${dateDivider} ${endDate}`
@@ -20,7 +21,7 @@ export const ExperienceListItem = ({
         <ListItem disableGutters>
             <ListItemText
                 primary={
-                    <Typography variant="h4" color="secondary">
+                    <Typography style={{fontWeight: 'bold', fontSize: '1.2rem'}} color={theme.palette.mistlavander.main}>
                         {startDate}
                         <DividerContainer component="span">
                             {dateDivider}
@@ -32,15 +33,15 @@ export const ExperienceListItem = ({
                     <React.Fragment>
                         <Typography
                             component="span"
-                           color="secondary"
+                          
                             sx={{ color: 'secondary', display: 'inline' }}
                         >
                             {titleFormat}
                         </Typography>
                         {!hasSingleRow && (
-                            <Typography color="primary">
+                            <TransformedTypography textTransform="uppercase" fontStyle="italic" color="primary">
                                 {institution}
-                            </Typography>
+                            </TransformedTypography>
                         )}
                         {location && (
                             <Typography color="secondary">

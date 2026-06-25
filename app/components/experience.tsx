@@ -8,10 +8,6 @@ export const ExperienceContent = () => {
 	return (
 		<section
 			id='experience'
-			style={{
-				minHeight: '100vh',
-
-			}}
 		>
 			<Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
 			>
@@ -19,7 +15,7 @@ export const ExperienceContent = () => {
 					size={{
 						xs: 12,
 						sm: 8,
-						md: 12,
+						md: 6,
 						lg: 6,
 					}}
 					sx={{ minHeight: 160 }}>
@@ -29,7 +25,7 @@ export const ExperienceContent = () => {
 					size={{
 						xs: 12,
 						sm: 11,
-						md: 12,
+						md: 6,
 						lg: 6,
 					}}
 					sx={{ minHeight: 160 }}>

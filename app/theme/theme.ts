@@ -22,10 +22,37 @@ export let theme: ThemeOptions = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#9D59E6',
+      main: '#9D59E6', // aurora purple
     },
     secondary: {
-      main: '#6e6ef5',
+      main: '#6e6ef5', // neon indigo
+    },
+    background: {
+      default: '#1e1a22',
+      paper: '#1e1a22',
+    },
+    text: {
+      primary: '#d4d1f5',
+    },
+  },
+      typography: {
+    h1: {
+      fontSize: '3.2rem',
+    },
+    h2: {
+      fontSize: '2.8rem',
+    },
+    h3: {
+      fontSize: '2.5rem',
+    },
+    h4: {
+      fontSize: '2rem',
+    },
+    h6: {
+      fontSize: '1rem',
+    },
+    overline: {
+      fontSize: '1rem',
     },
   },
 });
@@ -35,7 +62,7 @@ theme = createTheme(theme, {
   palette: {
     mistlavander: theme.palette?.augmentColor({
       color: {
-        main: '#B8B3EF',
+        main: '#9d94e6',
       },
       name: 'mistlavander',
     }),
