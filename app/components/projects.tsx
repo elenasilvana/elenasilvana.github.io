@@ -71,8 +71,8 @@ export const ProjectsContent = () => {
 				<Grid
 					size={{
 						xs: 12,
-						sm: 4,
-						md: 6,
+						sm: 8,
+						md: 12,
 						lg: 6,
 					}}
 					sx={{ minHeight: 160 }}>
@@ -80,22 +80,20 @@ export const ProjectsContent = () => {
 				</Grid>
 				<Grid
 					size={{
-						xs: 12,
-						sm: 4,
-						md: 6,
+						xs: 10,
+						sm: 8,
+						md: 12,
 						lg: 6,
 					}}
 					sx={{ minHeight: 160 }}>
-					<Box>
 						<CarousselComponent itemsList={() => projects.map(({ title, img, description, url, technologies }) => (
-							<ProjectCard
-								img={img}
-								title={title}
-								description={description}
-								technologies={technologies}
-								demoUrl={url}
+								<ProjectCard
+									img={img}
+									title={title}
+									description={description}
+									technologies={technologies}
+									demoUrl={url}
 							/>))} />
-					</Box>
 				</Grid>
 			</Grid>
 		</section>

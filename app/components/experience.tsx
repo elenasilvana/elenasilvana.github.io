@@ -18,8 +18,8 @@ export const ExperienceContent = () => {
 				<Grid
 					size={{
 						xs: 12,
-						sm: 4,
-						md: 6,
+						sm: 8,
+						md: 12,
 						lg: 6,
 					}}
 					sx={{ minHeight: 160 }}>
@@ -28,8 +28,8 @@ export const ExperienceContent = () => {
 				<Grid
 					size={{
 						xs: 12,
-						sm: 4,
-						md: 6,
+						sm: 11,
+						md: 12,
 						lg: 6,
 					}}
 					sx={{ minHeight: 160 }}>

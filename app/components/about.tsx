@@ -1,24 +1,28 @@
 import { Box, Chip, Divider, Grid, List, ListItem, ListItemText, Typography } from "@mui/material"
 import { educationDetails, languageDetails, methodologies, softSkills, technologies } from "~/data/about";
 import { ExperienceListItem } from "./experienceListItem";
-import { Language, School } from "@mui/icons-material";
+import { Height, Language, School } from "@mui/icons-material";
 import { IconContainer } from "~/styles/common-components";
 
 export const AboutContent = () => {
     return (
         <section id="about" style={{ minHeight: '100vh' }}>
-            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            <Grid container rowSpacing={2}
+                columnSpacing={3}
             >
+                <Grid style={{ height: 16 }} spacing={3} size={12}>
+
+                </Grid>
                 <Grid
                     size={{
                         xs: 12,
-                        sm: 4,
-                        md: 6,
-                        lg: 6,
+                        sm: 8,
+                        md: 12,
+                        lg: 12,
                     }}
                     sx={{ minHeight: 160 }}>
-                    <Box style={{ display: 'flex', width: '100%', flexDirection: 'column' }}>
-                        <Box component="span">
+                    <Box style={{ display: 'flex', width: '100%'}}>
+                        <Box style={{paddingRight: 16}}component="span">
                             <Typography sx={{ fontWeight: 'bold' }} variant="h2" color="primary">Elena Silvana</Typography>
                             <Typography sx={{ fontWeight: 'bold' }} variant="h2" color="secondary">Casillas</Typography>
                         </Box>
@@ -28,12 +32,22 @@ export const AboutContent = () => {
                         </Box>
 
                     </Box>
+                </Grid>
+
+                <Grid
+                    size={{
+                        xs: 12,
+                        sm: 8,
+                        md: 6,
+                        lg: 6,
+                    }}
+                    sx={{ minHeight: 160 }}>
                     <Typography variant="h2" color="primary">About Me</Typography>
                 </Grid>
                 <Grid
                     size={{
                         xs: 12,
-                        sm: 4,
+                        sm: 11,
                         md: 6,
                         lg: 6,
                     }}
@@ -63,7 +77,7 @@ export const AboutContent = () => {
                 <Grid
                     size={{
                         xs: 12,
-                        sm: 4,
+                        sm: 8,
                         md: 8,
                         lg: 8,
                     }} >
@@ -146,7 +160,7 @@ export const AboutContent = () => {
                         >
                             {softSkills.map((skill) => (
                                 <ListItem disableGutters >
-                                     <Chip label={skill} variant="outlined" color="secondary" size="small" />
+                                    <Chip label={skill} variant="outlined" color="secondary" size="small" />
                                     {/* <ListItemText primary={skill} /> */}
                                 </ListItem>
                             ))}
