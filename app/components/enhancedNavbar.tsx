@@ -11,15 +11,19 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { sectionIds } from '~/sections';
 import SelectionContext from '~/context/sectionContext';
-import { Badge, Link } from '@mui/material';
-import { AccountCircle, LinkedIn, Mail } from '@mui/icons-material';
+import { Link, SvgIcon, useTheme } from '@mui/material';
+import { LinkedIn, Mail } from '@mui/icons-material';
 import { GitHub } from '@mui/icons-material';
+import logo from '../img/elena-name.svg';
+import frontDev from '../img/front-end-dev.svg'
+import { Container as StyledContainer } from '~/styles/common-components';
 
 
 function EnhancedNavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
   const selectedSection = React.useContext(SelectionContext)
+  const theme = useTheme();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -35,7 +39,7 @@ function EnhancedNavBar() {
   };
 
   return (
-    <AppBar position="sticky">
+    <AppBar style={{background: theme.palette.midnightGraphite.main}} position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
@@ -73,9 +77,16 @@ function EnhancedNavBar() {
               ))}
             </Menu>
           </Box>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {sectionIds.map((sectionId) => (
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
+            <StyledContainer>
+              <img height={50} width={150} src={logo}  alt="elena casillas" />
+              <img  height={50} width={150} src={frontDev} alt="front end developer" />
+            </StyledContainer>
+          </Box>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row'}}>
+            <StyledContainer flex flexDirection='row' alignSelf='center' height="fit-content">
+                {sectionIds.map((sectionId) => (
               <Button
                 variant={selectedSection.selectedSection === sectionId ? 'outlined' : undefined}
                 key={sectionId}
@@ -85,39 +96,39 @@ function EnhancedNavBar() {
                 {sectionId}
               </Button>
             ))}
-          </Box>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
-              <IconButton
-                size="large"
-                edge="end"
-                aria-label="account of current user"
-                color="secondary"
-              >
-                <GitHub />
-              </IconButton>
-            </Link>
-            <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
-              <IconButton
-                size="large"
-                edge="end"
-                aria-label="account of current user"
-                color="secondary"
-              >
-                <LinkedIn />
-              </IconButton>
-            </Link>
-            <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
-              <IconButton
-                size="large"
-                edge="end"
-                aria-label="account of current user"
-                color="secondary"
-              >
-                <Mail />
-              </IconButton>
-            </Link>
+            </StyledContainer>
+            <StyledContainer flex flexDirection='column'>
+              <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
+                <IconButton
+                  size="large"
+                  edge="end"
+                  aria-label="github button"
+                  color="secondary"
+                >
+                  <GitHub />
+                </IconButton>
+              </Link>
+              <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
+                <IconButton
+                  size="large"
+                  edge="end"
+                  aria-label="linkedin account"
+                  color="secondary"
+                >
+                  <LinkedIn />
+                </IconButton>
+              </Link>
+              <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
+                <IconButton
+                  size="large"
+                  edge="end"
+                  aria-label="contact Elena"
+                  color="secondary"
+                >
+                  <Mail />
+                </IconButton>
+              </Link>
+            </StyledContainer>
           </Box>
         </Toolbar>
       </Container>

@@ -24,8 +24,8 @@ export default function Home() {
 
 	useEffect(() => {
 		const index = getSectionIndex(sectionIds, selectedSection.selectedSection)
-		console.log('index', index)
-		console.log('selectedSection', selectedSection)
+		// console.log('index', index)
+		// console.log('selectedSection', selectedSection)
 		if (index) {
 			refScroll?.current.children[index].scrollIntoView()
 		}

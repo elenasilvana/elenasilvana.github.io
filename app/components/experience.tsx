@@ -47,6 +47,7 @@ export const ExperienceContent = () => {
 									hasSingleRow
 									hasSlashDivider
 									description={description}
+									hasColorDivider
 								/>
 							))}
 						</List>

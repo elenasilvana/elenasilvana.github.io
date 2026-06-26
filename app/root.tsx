@@ -9,17 +9,14 @@ import {
 
 import type { Route } from './+types/root';
 import './app.css';
-import { NavBar } from './components/navbar';
 import SelectionContext from './context/sectionContext';
 import { useState } from 'react';
-import { Container, createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import { Container, CssBaseline, ThemeProvider } from '@mui/material';
 import { theme } from './theme/theme';
 import EnhancedNavBar from './components/enhancedNavbar';
 
 export function Layout({ children }: { children: React.ReactNode }) {
 	const [selectedSection, setSelectedSection] = useState('about')
-
-	console.log('theme.palette', theme.palette)
 	return (
 		<html lang='en'>
 			<head>
@@ -43,10 +40,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 							disableGutters
 						>	
 							<EnhancedNavBar />
-						
-								{/* <div>
-									<NavBar />
-								</div> */}
 								{children}
 
 						</Container>		

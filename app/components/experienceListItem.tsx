@@ -9,21 +9,23 @@ export const ExperienceListItem = ({
     location,
     hasSingleRow,
     hasSlashDivider,
-    description
+    description, 
+    hasColorDivider,
 }: any) => {
     const theme = useTheme()
     const { startDate, endDate } = dateRange;
     const dateDivider = hasSlashDivider ? ' / ' : ' - ';
     const date = `${startDate} ${dateDivider} ${endDate}`
     const titleFormat = hasSingleRow ? `${title} · ${institution}` : title
+    const palette = theme.palette;
 
     return (
         <ListItem disableGutters>
             <ListItemText
                 primary={
-                    <Typography style={{fontWeight: 'bold', fontSize: '1.2rem'}} color={theme.palette.mistlavander.main}>
+                    <Typography style={{fontWeight: 'bold', fontSize: '1.2rem', color: theme.palette.mistlavander.main}}>
                         {startDate}
-                        <DividerContainer component="span">
+                        <DividerContainer color={hasColorDivider ? palette.primary.main : undefined} component="span">
                             {dateDivider}
                         </DividerContainer>
                         {endDate}
@@ -33,13 +35,12 @@ export const ExperienceListItem = ({
                     <React.Fragment>
                         <Typography
                             component="span"
-                          
-                            sx={{ color: 'secondary', display: 'inline' }}
+                            sx={{ display: 'inline', color: hasSingleRow ? palette.primary.main : palette.text.primary  }}
                         >
                             {titleFormat}
                         </Typography>
                         {!hasSingleRow && (
-                            <TransformedTypography textTransform="uppercase" fontStyle="italic" color="primary">
+                            <TransformedTypography textTransform="uppercase" fontStyle="italic" color={palette.primary.main}>
                                 {institution}
                             </TransformedTypography>
                         )}
@@ -49,7 +50,7 @@ export const ExperienceListItem = ({
                             </Typography>
                         )}
                         {description && (
-                            <Typography>
+                            <Typography color="textPrimary">
                                 {description}
                             </Typography>
                         )}

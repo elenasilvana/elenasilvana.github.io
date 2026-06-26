@@ -2,12 +2,10 @@ import { Box, Chip, Divider, Grid, List, ListItem, ListItemText, Typography, use
 import { educationDetails, languageDetails, methodologies, softSkills, technologies } from "~/data/about";
 import { ExperienceListItem } from "./experienceListItem";
 import { Language, School } from "@mui/icons-material";
-import { Container, IconContainer } from "~/styles/common-components";
+import { Container, IconContainer, TransformedTypography } from "~/styles/common-components";
 
 export const AboutContent = () => {
     const theme = useTheme()
-
-    console.log('%c THEME ', 'color:red;', theme.palette.mistlavander.main)
     return (
         <section id="about">
             <Grid container rowSpacing={2}
@@ -15,25 +13,6 @@ export const AboutContent = () => {
             >
                 <Grid style={{ height: 16 }} spacing={3} size={12}>
 
-                </Grid>
-                <Grid
-                    size={{
-                        xs: 12,
-                        sm: 8,
-                        md: 12,
-                        lg: 12,
-                    }}
-                    sx={{ minHeight: 160 }}>
-                    <Container flex width={'100%'} flexWrap justifyContent="flex-start">
-                        <Box style={{ paddingRight: 16 }} component="span">
-                            <Typography sx={{ fontWeight: 'bold' }} variant="h2" color="primary">Elena Silvana</Typography>
-                            <Typography sx={{ fontWeight: 'bold' }} variant="h2" color="secondary">Casillas</Typography>
-                        </Box>
-                        <Box component="span">
-                            <Typography sx={{ fontWeight: 'bold' }} variant="h3">Front-End</Typography>
-                            <Typography sx={{ fontWeight: 'bold' }} variant="h3" style={{ background: 'purple' }}>Developer</Typography>
-                        </Box>
-                    </Container>
                 </Grid>
 
                 <Grid
@@ -133,7 +112,11 @@ export const AboutContent = () => {
                                 {languageDetails.map(({ language, level }) => (
                                     <ListItem disableGutters disablePadding>
                                         <ListItemText
-                                            primary={`${language} ${level}`}
+                                            primary={
+                                                <TransformedTypography textTransform="capitalize">
+                                                    {`${language} ${level}`}
+                                                </TransformedTypography>
+                                            }
                                         />
                                     </ListItem>
                                 ))}
