@@ -8,7 +8,7 @@
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -40,5 +40,5 @@
   "engines": {
     "node": "20.19.6"
   },
-  "homepage": "https://elenasilvana.github.io"
+  "homepage": "https://elenasilvana.github.io/portfolio"
 }
