@@ -108,7 +108,7 @@ function EnhancedNavBar() {
                   <GitHub />
                 </IconButton>
               </Link>
-              <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
+              <Link href='https://www.linkedin.com/in/elena-silvana-c' underline="hover" target="_blank" rel="noopener">
                 <IconButton
                   size="large"
                   edge="end"
@@ -116,16 +116,6 @@ function EnhancedNavBar() {
                   color="secondary"
                 >
                   <LinkedIn />
-                </IconButton>
-              </Link>
-              <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
-                <IconButton
-                  size="large"
-                  edge="end"
-                  aria-label="contact Elena"
-                  color="secondary"
-                >
-                  <Mail />
                 </IconButton>
               </Link>
             </StyledContainer>
