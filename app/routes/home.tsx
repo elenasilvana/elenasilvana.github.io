@@ -82,7 +82,7 @@ export default function Home() {
 					<Section key={i} />
 				</div>
 			))}
-			<Button variant='outlined' onClick={handleScrollTop}>go top</Button>
+			{/* <Button variant='outlined' onClick={handleScrollTop}>go top</Button> */}
 		</Container>
 	);
 }
