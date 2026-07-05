@@ -1,16 +1,23 @@
 import { Box, Divider, Grid, List, Typography } from "@mui/material";
 import { ExperienceListItem } from "./experienceListItem";
-import { professionalExperience } from "~/data/experience";
+import { professionalExperience } from "../data/experience";
+import { createRef, useContext, useEffect } from "react";
+import useIsVisible from "../hooks/useIsVisible";
+import SelectionContext from "../context/sectionContext";
+import { Sections } from "../sections";
 
 const sortedExperience = professionalExperience.sort((a, b) => { return a.startDate > b.startDate ? -1 : 0 })
 
 export const ExperienceContent = () => {
 	return (
 		<section
-			id='experience'
+			id={Sections.experience}
 		>
 			<Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-			>
+			>	
+			     {/* <Grid size={12}
+                    sx={{ minHeight: 160 }}>
+                </Grid> */}
 				<Grid
 					size={{
 						xs: 12,
@@ -53,8 +60,7 @@ export const ExperienceContent = () => {
 						</List>
 					</Box>
 				</Grid>
-				<Grid size={12}
-					sx={{ minHeight: 160 }}>
+				<Grid size={12}>
 					<Divider />
 				</Grid>
 			</Grid>

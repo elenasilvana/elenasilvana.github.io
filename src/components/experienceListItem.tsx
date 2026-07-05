@@ -1,6 +1,6 @@
 import { Box, ListItem, ListItemText, Typography, useTheme } from "@mui/material";
 import React from "react";
-import { DividerContainer, TransformedTypography } from "~/styles/common-components";
+import { DividerContainer, TransformedTypography } from "../styles/common-components";
 
 export const ExperienceListItem = ({
     title,

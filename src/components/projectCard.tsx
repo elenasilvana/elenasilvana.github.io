@@ -2,7 +2,7 @@ import { Box, Card, CardActions, CardContent, CardMedia, Chip, Divider, Link, Ty
 
 export const ProjectCard = ({ img, title, description, primaryTechnology, technologies, demoUrl }: any) => {
     return (
-        <Card sx={{ maxWidth: 340 }}>
+        <Card sx={{ maxWidth: 340, justifySelf: 'center' }}>
             <Box style={{ display: 'flex', justifyContent: 'center', paddingTop: 16 }}>
                 <CardMedia
                     sx={{ objectFit: 'cover', width: 140, borderRadius: 7 }}

@@ -1,18 +1,21 @@
 import { Box, Chip, Divider, Grid, List, ListItem, ListItemText, Typography, useTheme } from "@mui/material"
-import { educationDetails, languageDetails, methodologies, softSkills, technologies } from "~/data/about";
+import { educationDetails, languageDetails, methodologies, softSkills, technologies } from "../data/about";
 import { ExperienceListItem } from "./experienceListItem";
 import { Language, School } from "@mui/icons-material";
-import { Container, IconContainer, TransformedTypography } from "~/styles/common-components";
+import { Container, IconContainer, TransformedTypography } from "../styles/common-components";
+import { Sections } from "../sections";
 
 export const AboutContent = () => {
     const theme = useTheme()
+   
     return (
-        <section id="about">
-            <Grid container rowSpacing={2}
+        <section id={Sections.about}>
+          <Grid container rowSpacing={2}
                 columnSpacing={3}
             >
-                <Grid style={{ height: 16 }} spacing={3} size={12}>
-
+                   <Grid size={12}
+                    sx={{ minHeight: 10}}>
+                  
                 </Grid>
 
                 <Grid
@@ -65,7 +68,9 @@ export const AboutContent = () => {
                     <Box>
                         <Container flex>
                             <IconContainer>
-                                <School fontSize="large" color={theme.palette.mistlavander.main} />
+                                <School fontSize="large" 
+                                    color={theme.palette.mistlavander.main}
+                                 />
                             </IconContainer>
                             <Typography variant="overline" color="primary">
                                 Education
@@ -100,7 +105,9 @@ export const AboutContent = () => {
                         <Container flex>
                             <IconContainer>
 
-                                <Language fontSize="large" color={theme.palette.mistlavander.main} />
+                                <Language fontSize="large" 
+                                    color={theme.palette.mistlavander.main} 
+                                />
                             </IconContainer>
                             <Typography variant="overline" color="primary">
                                 Languages
@@ -144,8 +151,8 @@ export const AboutContent = () => {
                             {softSkills.map((skill) => (
                                 <ListItem disableGutters >
                                     <Chip label={skill} variant="outlined" color="secondary" size="small" />
-                                    {/* <ListItemText primary={skill} /> */}
-                                </ListItem>
+                       
+                           </ListItem>
                             ))}
 
                         </Box>
@@ -209,7 +216,7 @@ export const AboutContent = () => {
                     sx={{ minHeight: 160 }}>
                     <Divider />
                 </Grid>
-            </Grid>
+            </Grid> 
         </section>
     )
 }

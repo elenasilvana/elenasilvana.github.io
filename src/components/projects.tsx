@@ -1,13 +1,17 @@
 import { Grid, Typography } from "@mui/material"
-import { projects } from "~/data/projects";
-import { CarousselComponent } from "./caroussel";
+import { projects } from "../data/projects";
 import { ProjectCard } from "./projectCard";
+import { CarousselComponent } from "./caroussel";
+import { Sections } from "../sections";
 
 export const ProjectsContent = () => {
 	return (
-		<section id="projects" >
-			<Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+		<section id={Sections.projects} >
+			<Grid sx={{ minHeight: '80vh',}} container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
 			>
+				<Grid size={12}
+					sx={{ minHeight: 160 }}>
+				</Grid>
 				<Grid
 					size={{
 						xs: 12,
@@ -36,16 +40,20 @@ export const ProjectsContent = () => {
 						lg: 5,
 					}}
 					sx={{ minHeight: 160 }}>
-					<CarousselComponent itemsList={() => projects.map(({ title, img, description, url, technologies }) => (
-						<ProjectCard
-							img={img}
-							title={title}
-							description={description}
-							technologies={technologies}
-							demoUrl={url}
-						/>))} />
+
+
+					<CarousselComponent
+						itemsList={() => projects.map(({ title, img, description, url, technologies }) => (
+							<ProjectCard
+								img={img}
+								title={title}
+								description={description}
+								technologies={technologies}
+								demoUrl={url}
+							/>))}
+					/>
 				</Grid>
-					<Grid
+				<Grid
 					size={{
 						xs: 1,
 						sm: 2,
