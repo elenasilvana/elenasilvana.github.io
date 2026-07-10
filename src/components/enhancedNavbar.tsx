@@ -21,6 +21,7 @@ import { Container as StyledContainer } from '../styles/common-components';
 
 function EnhancedNavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  //@ts-ignore
   const { setSelectedSection, setIsBarNavigation, selectedSection } = React.useContext(SelectionContext)
   const theme = useTheme();
 
@@ -36,7 +37,10 @@ function EnhancedNavBar() {
 
 
   return (
-    <AppBar style={{ background: theme.palette.midnightGraphite.main }} position="sticky">
+    <AppBar 
+    //@ts-ignore
+      style={{ background: theme.palette.midnightGraphite.main }} 
+      position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 

@@ -6,7 +6,7 @@ import { createTheme } from '@mui/material/styles';
 // #6E6EF5 → Neon Indigo
 // #1E1A22 → Midnight Graphite
 
-// Augment the palette to include a salmon color
+// Augment the palette to include custom color
 declare module '@mui/material/styles' {
   interface Palette {
     mistlavander: Palette['primary'];

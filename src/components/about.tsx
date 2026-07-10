@@ -69,6 +69,7 @@ export const AboutContent = () => {
                         <Container flex>
                             <IconContainer>
                                 <School fontSize="large" 
+                                //@ts-ignore
                                     color={theme.palette.mistlavander.main}
                                  />
                             </IconContainer>
@@ -104,8 +105,8 @@ export const AboutContent = () => {
                     <Box>
                         <Container flex>
                             <IconContainer>
-
                                 <Language fontSize="large" 
+                                //@ts-ignore
                                     color={theme.palette.mistlavander.main} 
                                 />
                             </IconContainer>

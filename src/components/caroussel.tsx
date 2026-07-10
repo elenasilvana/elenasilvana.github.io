@@ -4,7 +4,8 @@ import Slider from "react-slick";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Box } from "@mui/material";
-// // @ts-ignore
+
+// @ts-ignore
 const SliderComponent = Slider.default ;
 
 export const CarousselComponent = ({ itemsList }: any) => {

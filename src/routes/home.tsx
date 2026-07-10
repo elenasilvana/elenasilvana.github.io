@@ -13,6 +13,7 @@ const sections = [AboutContent,
 
 export default function Home() {
 	const refScroll = createRef<HTMLDivElement>();
+	//@ts-ignore
 	const { selectedSection, isBarNavigation, setIsBarNavigation, setSelectedSection } = useContext(SelectionContext);
 
 	useEffect(() => {

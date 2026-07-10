@@ -1,6 +1,6 @@
 {
   "name": "portafolio",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build/client"
+    "deploy": "gh-pages -b master -d dist"
   },
     "repository": {
     "type": "git",
