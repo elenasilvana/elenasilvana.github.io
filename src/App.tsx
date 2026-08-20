@@ -21,9 +21,8 @@ export default function App() {
         setIsBarNavigation
       }}>
         <Container
-          maxWidth="xl"
+          maxWidth={false}
           component="main"
-          sx={{ display: 'flex', flexDirection: 'column' }}
           disableGutters
         >
           <EnhancedNavBar />

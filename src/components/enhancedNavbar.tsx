@@ -16,7 +16,7 @@ import { LinkedIn, Mail } from '@mui/icons-material';
 import { GitHub } from '@mui/icons-material';
 import logo from '../img/elena-name.svg';
 import frontDev from '../img/front-end-dev.svg'
-import { Container as StyledContainer } from '../styles/common-components';
+import { Container as StyledContainer, StyledIconButton } from '../styles/common-components';
 
 
 function EnhancedNavBar() {
@@ -79,7 +79,7 @@ function EnhancedNavBar() {
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
-            <StyledContainer>
+            <StyledContainer padding=' 8px 0px'>
               <img height={50} width={150} src={logo} alt="elena casillas" />
               <img height={50} width={150} src={frontDev} alt="front end developer" />
             </StyledContainer>
@@ -98,28 +98,36 @@ function EnhancedNavBar() {
                 </Button>
               ))}
             </StyledContainer>
+              <Box
+                //@ts-ignore
+                style={{borderStyle: 'solid', borderColor: theme.palette.neonIndigo.main, borderRadius: '10px', borderWidth: '1px'
+              }}>
             <StyledContainer flex flexDirection='column'>
-              <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
-                <IconButton
-                  size="large"
-                  edge="end"
-                  aria-label="github button"
-                  color="secondary"
-                >
-                  <GitHub />
-                </IconButton>
-              </Link>
-              <Link href='https://www.linkedin.com/in/elena-silvana-c' underline="hover" target="_blank" rel="noopener">
-                <IconButton
-                  size="large"
-                  edge="end"
-                  aria-label="linkedin account"
-                  color="secondary"
-                >
-                  <LinkedIn />
-                </IconButton>
-              </Link>
+                <Link href='https://github.com/elenasilvana' underline="hover" target="_blank" rel="noopener">
+                  <StyledIconButton
+                    size="large"
+                    edge="end"
+                    aria-label="github button"
+                    color="secondary"
+                  >
+                    <GitHub
+                      //@ts-ignore
+                      sx={{color: theme.palette.mistlavander.main}}/>
+                  </StyledIconButton>
+                </Link>
+                <Link href='https://www.linkedin.com/in/elena-silvana-c' underline="hover" target="_blank" rel="noopener">
+                  <StyledIconButton
+                    size="large"
+                    edge="end"
+                    aria-label="linkedin account"
+                  >
+                    <LinkedIn 
+                    //@ts-ignore
+                    sx={{color: theme.palette.mistlavander.main}} />
+                  </StyledIconButton>
+                </Link>
             </StyledContainer>
+              </Box>
           </Box>
         </Toolbar>
       </Container>

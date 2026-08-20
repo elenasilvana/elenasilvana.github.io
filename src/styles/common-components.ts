@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 interface StyledDivider {
@@ -15,6 +15,7 @@ interface StyledContainer {
     flexDirection?: 'column' | 'row';
     height?: string | number;
     alignSelf?: string;
+    padding?: string;
 }
 
 interface StyledTypography {
@@ -33,14 +34,15 @@ export const DividerContainer = styled(Box)<StyledDivider>(({fontWeight, color})
     color: color || undefined,
 }))
 
-export const Container = styled(Box)<StyledContainer>(({flex, width, flexWrap, justifyContent, flexDirection, alignSelf, height})=>({
+export const Container = styled(Box)<StyledContainer>(({flex, width, flexWrap, justifyContent, flexDirection, alignSelf, height, padding})=>({
     display: flex ? 'flex' : undefined,
     width: width || undefined,
     flexWrap: flexWrap ? 'wrap' : undefined,
     justifyContent: justifyContent || undefined,
     flexDirection: flexDirection || undefined,
     alignSelf: alignSelf || undefined,
-    height: height || undefined
+    height: height || undefined,
+    padding: padding || undefined
 }))
 
 export const TransformedTypography = styled(Typography)<StyledTypography>(({textTransform, fontStyle, color})=>({
@@ -48,3 +50,8 @@ export const TransformedTypography = styled(Typography)<StyledTypography>(({text
    fontStyle: fontStyle || undefined,
    color: color || undefined
 }))
+
+export const StyledIconButton = styled(IconButton)({
+    padding: '4px 16px',
+    width: '100%'
+})
